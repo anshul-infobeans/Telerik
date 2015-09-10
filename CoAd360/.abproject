@@ -1,0 +1,28 @@
+{
+  "ProjectName": "CoAd360",
+  "ProjectGuid": "f2410460-178f-48a2-80b3-72ca4ba69aac",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.CoAd360",
+  "DisplayName": "CoAd360",
+  "Author": "",
+  "Description": "CoAd360",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{F0A65104-D4F4-4012-B799-F612D75820F6}",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "false",
+  "iOSStatusBarStyle": "Default",
+  "FrameworkVersion": "1.2.3",
+  "Framework": "NativeScript"
+}
