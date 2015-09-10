@@ -1,0 +1,4 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" 
+      xmlns:nu="node_modules/animated-menu/animatedmenu">
+    <nu:AniMenu main="views/dashboard/dashboard-page" menu="views/menu/menu-page"></nu:AniMenu>
+</Page>

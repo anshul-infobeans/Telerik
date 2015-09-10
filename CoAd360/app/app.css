@@ -1,3 +1,28 @@
 Page {
     background-color: #FFFFFF;
 }
+
+.primaryButtonNormal {
+    background-color: #76BD22;
+    opacity: 1;
+    color: white;
+}
+
+.primaryButtonSelected {
+    background-color: #76BD22;
+    opacity: 0.85;
+    color: white;
+}
+
+.primaryButtonHighlighted {
+    background-color: #76BD22;
+    opacity: 0.6;
+    color: white;
+}
+
+.primaryButtonUnselected {
+    background-color: #7A7B7E;
+    opacity: 0.6;
+    color: #A9A9A9;
+}
+

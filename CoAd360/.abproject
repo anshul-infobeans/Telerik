@@ -2,7 +2,7 @@
   "ProjectName": "CoAd360",
   "ProjectGuid": "f2410460-178f-48a2-80b3-72ca4ba69aac",
   "projectVersion": 1,
-  "AppIdentifier": "com.telerik.CoAd360",
+  "AppIdentifier": "com.coadvantage.coad",
   "DisplayName": "CoAd360",
   "Author": "",
   "Description": "CoAd360",
@@ -18,8 +18,7 @@
     "android.permission.INTERNET"
   ],
   "DeviceOrientations": [
-    "Portrait",
-    "Landscape"
+    "Portrait"
   ],
   "AndroidHardwareAcceleration": "false",
   "iOSStatusBarStyle": "Default",

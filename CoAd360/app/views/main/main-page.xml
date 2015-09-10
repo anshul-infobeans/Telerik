@@ -1,0 +1,8 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
+  <!--<StackLayout>
+        <Button text="Login" id="login" tap="navigateLogin" cssClass="login-button"/>
+  </StackLayout>-->
+    <DockLayout stretchLastChild="true" orientation="horizontal" backgroundColor="#FF0000">
+   <Label text="Switch" dock="left" margin="5" /><Switch checked="true" dock="right" marginRight="5"/>
+ </DockLayout >
+</Page>

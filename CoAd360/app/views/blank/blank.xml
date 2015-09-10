@@ -1,0 +1,5 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd">
+  <GridLayout>
+    <Label text="Dashboard" style="text-align: center;"/>
+  </GridLayout>
+</Page>

@@ -1,0 +1,9 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
+    <StackLayout loaded="mainContentLoaded" cssClass="main">
+        <Button text="{{ menuText }}" cssClass="menu-open-button" loaded="menuBtnLoaded" />
+        <StackLayout>
+            <Label text="Main" cssClass="title" />
+            <Image src="~/res/kitty.jpeg" />
+        </StackLayout>
+    </StackLayout>
+</Page>
