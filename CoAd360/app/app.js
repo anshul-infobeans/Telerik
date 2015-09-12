@@ -2,6 +2,8 @@ var application = require("application");
 application.cssFile = "./app.css";
 application.mainModule = "./views/splash/splash-page";
 
+var fontModule = require("ui/styling/font");
+
 // set app version number
 global.appVersion = "0.1";
 
@@ -13,6 +15,20 @@ application.onLaunch = function (context) {
     }
     else if (application.ios) {
         console.log("Launched iOS application.");
+        
+        //register fonts for ios
+        fontModule.ios.registerFont("Roboto-Black.ttf");
+		fontModule.ios.registerFont("Roboto-BlackItalic.ttf");
+		fontModule.ios.registerFont("Roboto-Bold.ttf");
+		fontModule.ios.registerFont("Roboto-BoldItalic.ttf");
+		fontModule.ios.registerFont("Roboto-Italic.ttf");
+		fontModule.ios.registerFont("Roboto-Light.ttf");
+		fontModule.ios.registerFont("Roboto-LightItalic.ttf");
+		fontModule.ios.registerFont("Roboto-Medium.ttf");
+		fontModule.ios.registerFont("Roboto-MediumItalic.ttf");
+		fontModule.ios.registerFont("Roboto-Regular.ttf");
+		fontModule.ios.registerFont("Roboto-Thin.ttf");
+		fontModule.ios.registerFont("Roboto-ThinItalic.ttf");
     }
 };
 

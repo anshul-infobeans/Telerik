@@ -6,19 +6,19 @@ var __extends = this.__extends || function (d, b) {
 };
 
 var observable = require("data/observable");
+var frameModule = require("ui/frame");
 
-var MainViewModel = (function (_super) {
-    __extends(MainViewModel, _super);
-    function MainViewModel() {
+var DashboardViewModel = (function (_super) {
+    __extends(DashboardViewModel, _super);
+    function DashboardViewModel() {
         _super.call(this);
         
-        this.set("menuText", "\u2630");
-        this.set("message", this.counter + " taps left");
     }
     
+    DashboardViewModel.prototype.logout = function () {
+        frameModule.topmost().goBack()
+    };
     
-    
-    return MainViewModel;
+    return DashboardViewModel;
 })(observable.Observable);
-exports.MainViewModel = MainViewModel;
-exports.mainViewModel = new MainViewModel();
+exports.DashboardViewModel = DashboardViewModel;

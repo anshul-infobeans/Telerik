@@ -90,15 +90,16 @@ var LoginViewModel = (function (_super) {
         
         if (this.validate()) {
             loginButton.isEnabled=true;
-            loginButton.style.opacity="1";
+            //loginButton.style.opacity="1";
+            loginButton.cssClass="login-button primaryButtonNormal";
         }
         else {
             loginButton.isEnabled=false;
-            loginButton.style.opacity="0.5";
+            //loginButton.style.opacity="0.5";
+            loginButton.cssClass="login-button primaryButtonUnselected";
         }
         
        this.set( "loginErrorVisibility", "collapsed" ); 
-       
         this.notify({ object: this, eventName: observable.Observable.propertyChangeEvent, propertyName: propertyName, value: value });
     };
     LoginViewModel.prototype.beginLoading = function () {
@@ -179,7 +180,6 @@ var LoginViewModel = (function (_super) {
     
     LoginViewModel.prototype.forgotPassword = function () {
         //check for platform
-        frameModule.topmost().ios.navBarVisibility = "always"; 
         frameModule.topmost().navigate({
 			moduleName: "./views/forgotpassword/forgotpassword-page",
 			animated: true

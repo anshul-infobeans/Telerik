@@ -22,27 +22,7 @@ body {
     margin-right: 15;
 }
 
-.sub-title {
-    horizontal-align: center;
-    vertical-align:bottom;
-    margin-bottom: 10;
-    font-size: 10;
-}
-
-.policyTerms {
-    horizontal-align: center;
-    vertical-align:bottom;
-    margin-bottom: 25;
-}
-
-.policyTermsButton {
-    font-size: 10;
-}
-
 .login-button {
-    color: #FFFFFF;
-    font-size: 20;
-    background-color: #72BF38;
     width: 280;
     height: 50;
 }
@@ -55,4 +35,7 @@ body {
 #text-email-error
 {
     opacity:0 ;
+    font-size: 10; 
+    background-color: #EC9700; 
+    text-align: center;
 }

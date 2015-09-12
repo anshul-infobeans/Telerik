@@ -2,21 +2,13 @@ var loginViewModelModule = require("../../view-models/login-view-model");
 var frameModule = require("ui/frame");
 var viewModule = require("ui/core/view");
 var viewModel;
+var page;
 
 function pageLoaded(args) {
     
-    var page = args.object;
+    page = args.object;
     
     viewModel = new loginViewModelModule.LoginViewModel();
-    
-    if (page.ios)
-    {
-        frameModule.topmost().ios.navBarVisibility = "never";    
-    }
-    else if (page.android)
-    {
-    	frameModule.topmost().android.actionBar.hide();
-	} 
     
     //Set the binding context on the page.
 	page.bindingContext = viewModel;
@@ -31,7 +23,7 @@ function pageLoaded(args) {
 	}
     
     var loginButton = viewModule.getViewById(page, "login");
-    loginButton.style.opacity="0.5";
+    loginButton.style.opacity="1";
     loginButton.isEnabled=false;
 };
 exports.pageLoaded = pageLoaded;
@@ -51,6 +43,18 @@ function rememberMeButtonTap(args) {
     viewModel.rememberMe();
 }
 exports.rememberMeButtonTap = rememberMeButtonTap;
+
+function userFieldPressed(args) {
+    var userField = viewModule.getViewById(page, "tusername");
+    userField.focus();
+}
+exports.userFieldPressed = userFieldPressed;
+
+function passwordFieldPressed(args) {
+    var passwordField = viewModule.getViewById(page, "tpassword");
+    passwordField.focus();
+}
+exports.passwordFieldPressed = passwordFieldPressed;
 
 
 
@@ -84,4 +88,13 @@ $.ajax({
               navigator.notification.alert("Unfortunately, an error occurred resetting your password.")
           }
       });
+      
+          if (page.ios)
+    {
+        frameModule.topmost().ios.navBarVisibility = "never";    
+    }
+    else if (page.android)
+    {
+    	frameModule.topmost().android.actionBar.hide();
+	} 
 */

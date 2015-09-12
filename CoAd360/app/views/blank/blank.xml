@@ -1,5 +1,6 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd">
-  <GridLayout>
-    <Label text="Dashboard" style="text-align: center;"/>
-  </GridLayout>
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
+  <StackLayout>
+    <Label text="Dashboard" style="text-align: center; height: 40; width: 280;"/>
+    <Button text="Logout Q" id="logoutButton" cssClass="logout-button" style="text-align: center; height: 40; width: 280; font-size: 40;" tap="logoutButtonTap" />
+  </StackLayout>
 </Page>
