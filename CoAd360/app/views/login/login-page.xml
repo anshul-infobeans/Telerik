@@ -5,50 +5,30 @@
             <Image src="~/resources/login/Logo.png" cssClass="app-logo" />
             <Border borderWidth="1" borderColor="#C0C0C0" width="280" height="50" tap="userFieldPressed">
             	<DockLayout width="278" backgroundColor="#FFFFFF" >
-                	<TextField dock="left" id="tusername" cssClass="text-input" hint="Email" keyboardType="email" text="{{ username }}" />
+                	<TextField dock="left" id="tusername" cssClass="text-input" hint="Email" keyboardType="email" returnKeyType="next" text="{{ username }}" />
                	    <Image dock="right" src="~/resources/login/Email.png" cssClass="input-image" stretch="aspectFit" tap="userFieldPressed" />
                 </DockLayout>
      		</Border>
-            <Label id="text-email-error" horizontalAlignment="center" text="Invalid Email" style="margin: 0 0 5 190; " width="90" height="18" />
-            <Border borderWidth="1" borderColor="#C0C0C0" width="280" height="50" tap="passwordFieldPressed">
+            <Label visibility="{{ emailErrorVisibility }}" cssClass="error-message" horizontalAlignment="center" text="Invalid Email" style="margin: 0 0 0 190; " width="90" height="18" />
+            <Border borderWidth="1" borderColor="#C0C0C0" width="280" height="50" tap="passwordFieldPressed" style="margin-top: 10">
             	<DockLayout width="278" backgroundColor="#FFFFFF" >
-                	<TextField dock="left" id="tpassword" cssClass="text-input" hint="Password" secure="true" text="{{ password }}"/>
+                	<TextField dock="left" id="tpassword" cssClass="text-input" hint="Password" secure="true" returnKeyType="go" text="{{ password }}"/>
                	    <Image dock="right" src="~/resources/login/Password_lock.png" cssClass="input-image" stretch="aspectFit" tap="passwordFieldPressed" />
                 </DockLayout>
      		</Border>
             <DockLayout stretchLastChild="true" horizontalAlignment="center" >
       			<Image dock="left" src="{{ checkBoxImageSource }}" style="margin: 10 0 10 0;" width="28" height="28" tap="rememberMeButtonTap" />
-                <Label id="lrememberMe" dock="left" text="Remember Me" style="color: white; font-size: 12; margin: 5 0 5 5; text-align: left;" width="90" height="28" tap="rememberMeButtonTap"/>
-   				<Label id="lforgotPassword" dock="right" text="Forgot Password?" style="color: white; font-size: 12; margin: 5 0 5 37; text-align: right; " width="120" height="28" cssClass="link"  tap="forgotPasswordButtonTap" />
+                <Label id="lrememberMe" dock="left" text="Remember me" width="90" height="28" tap="rememberMeButtonTap" cssClass="rememberForgot" />
+   				<Label id="lforgotPassword" dock="right" text="Forgot Password?" width="120" height="28"  tap="forgotPasswordButtonTap" cssClass="rememberForgot" />
  			</DockLayout >
-            <Button text="LOGIN" id="login" cssClass="login-button primaryButtonUnselected" tap="loginButtonTap" />
-            <Label id="login-error" visibility="{{loginErrorVisibility}}" horizontalAlignment="center" text="The e-mail address or password you entered was incorrect. Please try again" style="font-size: 11; background-color: #E49700; margin: 5 0 5 0; text-align: center;" width="280" height="30" textWrap="true" />
+            <Button text="Log In" id="login" cssClass="login-button primaryButtonUnselected" tap="loginButtonTap" />
+            <Label cssClass="error-message" visibility="{{ loginErrorVisibility }}" horizontalAlignment="center" text="The e-mail address or password you entered was incorrect. Please try again" style="margin: 5 0 5 0;" width="280" height="30" textWrap="true" />
             <ActivityIndicator busy="{{ isLoading }}" cssClass="activity-indicator" style="margin: 10 0 0 0;" />
     	</StackLayout>
         <StackLayout orientation="horizontal" cssClass="policyTerms">
-            <Label text="Privacy Policy" cssClass="policyTermsButton" tap="privacyButtonPressed" marginRight="10" />
-            <Label text="Terms Of Use" cssClass="policyTermsButton" tap="termsOfUseButtonPressed" marginLeft="10"/>
+            <Label id="privacyPolicy" text="Privacy Policy" cssClass="policyTermsButton" tap="privacyButtonPressed" />
+            <Label id="termsOfUser" text="Terms Of Use" cssClass="policyTermsButton" tap="termsOfUseButtonPressed"/>
         </StackLayout>
         <Label text="Copyright C 2014, CoAdvantage, Inc. All Rights Reserved." cssClass="copyrightText" />
 	</GridLayout>
 </Page>
-<!--<GridLayout>
-
-                <Button dock="left" id="remember-me-button" style="margin: 10 0 10 0;" width="28" height="28" />
-        <TextField id="username" cssClass="text-input" hint="e-mail" keyboardType="email" text="check"/>
-    </GridLayout>
-
-<StackLayout orientation="vertical">
-
-        <TextField hint="Email Address" keyboardType="email" />
-        <TextField secure="true" hint="Password" />
-
-        <Button text="Sign in" />
-        <Button text="Sign up for Groceries" />
-
-    </StackLayout>
-
-<GridLayout opacity="{{ isLoading ? 1 : 0 }}" verticalAlignment="stretch" horizontalAlignment="stretch" >
-            	<ActivityIndicator busy="{{ isLoading }}" cssClass="activity-indicator" />
-        	</GridLayout>
-    -->

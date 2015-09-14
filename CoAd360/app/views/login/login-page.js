@@ -20,6 +20,12 @@ function pageLoaded(args) {
             
 		var rememberMeLabel = viewModule.getViewById(page, "lrememberMe");
 		rememberMeLabel.android.setGravity(200);
+        
+        var privacyPolicy = viewModule.getViewById(page, "privacyPolicy");
+		privacyPolicy.android.setGravity(17);
+            
+		var termsOfUser = viewModule.getViewById(page, "termsOfUser");
+		termsOfUser.android.setGravity(17);
 	}
     
     var loginButton = viewModule.getViewById(page, "login");
@@ -56,7 +62,15 @@ function passwordFieldPressed(args) {
 }
 exports.passwordFieldPressed = passwordFieldPressed;
 
+function privacyPolicyPressed(args) {
+    viewModel.privacyPolicyPressed();
+}
+exports.privacyPolicyPressed = privacyPolicyPressed;
 
+function termsOfUsePressed(args) {
+    viewModel.termsOfUsePressed();
+}
+exports.termsOfUsePressed = termsOfUsePressed;
 
 /*
 dismissSoftInput()

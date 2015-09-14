@@ -22,13 +22,28 @@ var LoginViewModel = (function (_super) {
         this._password = "";
         this.set( "imageSource", "~/resources/login/LoginBackground.png" );
         this.set( "loginErrorVisibility", "collapsed" );
+        this.set( "emailErrorVisibility", "collapsed" );
         
         //check version numbers
 	if (appSettingsModule.hasKey("RememberMe")){
 		var isRememberMe = appSettingsModule.getBoolean("RememberMe")
 		if (isRememberMe)
         {
-            this.set( "checkBoxImageSource", "~/resources/login/CheckboxSelected.png" ); 
+            this.set( "checkBoxImageSource", "~/resources/login/CheckboxSelected.png" );
+            
+            if (appSettingsModule.hasKey("username"))
+                {
+                    var savedUserName = appSettingsModule.getString("username");
+                    this._username = savedUserName;
+                }
+            
+            /*
+            if (appSettingsModule.hasKey("password"))
+                {
+                    var savedPassword = appSettingsModule.getString("password");
+                    this._password = savedPassword;
+                } 
+                */
         }
         else
         {
@@ -36,7 +51,7 @@ var LoginViewModel = (function (_super) {
         }
 	} else {
 		appSettingsModule.setBoolean("RememberMe",false)
-        this.set( "checkBoxImageSource", "~/resources/Login/CheckboxUnselected.png" ); 
+        this.set( "checkBoxImageSource", "~/resources/login/CheckboxUnselected.png" ); 
 	}
      
         appSettingsModule.setString("currentVersion", global.appVersion);
@@ -83,23 +98,19 @@ var LoginViewModel = (function (_super) {
     LoginViewModel.prototype.notifyPropertyChanged = function (propertyName, value) {
         
         // hide all the error
-        this.set( "loginErrorVisibility", "visible" );
-        var emailError = frameModule.topmost().getViewById("text-email-error");
-        emailError.style.opacity="0";
+        this.set( "loginErrorVisibility", "collapsed" );
+        this.set( "emailErrorVisibility", "collapsed" );
         var loginButton = frameModule.topmost().getViewById("login");
         
         if (this.validate()) {
             loginButton.isEnabled=true;
-            //loginButton.style.opacity="1";
             loginButton.cssClass="login-button primaryButtonNormal";
         }
         else {
             loginButton.isEnabled=false;
-            //loginButton.style.opacity="0.5";
             loginButton.cssClass="login-button primaryButtonUnselected";
         }
         
-       this.set( "loginErrorVisibility", "collapsed" ); 
         this.notify({ object: this, eventName: observable.Observable.propertyChangeEvent, propertyName: propertyName, value: value });
     };
     LoginViewModel.prototype.beginLoading = function () {
@@ -124,10 +135,9 @@ var LoginViewModel = (function (_super) {
             
             if (utilityModule.validateEmail(this.username))
             {
+                appSettingsModule.setString("username",this.username)
+                
             	this.beginLoading();
-               
-                var emailError = frameModule.topmost().getViewById("text-email-error");
-            	emailError.style.opacity="0";
                 
                 frameModule.topmost().navigate({
 					moduleName: "./views/blank/blank",
@@ -136,8 +146,8 @@ var LoginViewModel = (function (_super) {
             }
             else
             {
-                var emailError = frameModule.topmost().getViewById("text-email-error");
-            	emailError.style.opacity="1";
+                //show error message for email
+                this.set( "emailErrorVisibility", "visible" );
             }    
             
             
@@ -185,6 +195,27 @@ var LoginViewModel = (function (_super) {
 			animated: true
 		});
     };
+    
+    LoginViewModel.prototype.privacyPolicyPressed = function () {
+        //check for platform
+        /*
+        frameModule.topmost().navigate({
+			moduleName: "./views/forgotpassword/forgotpassword-page",
+			animated: true
+		});
+        */
+    };
+    
+    LoginViewModel.prototype.termsOfUsePressed = function () {
+        //check for platform
+        /*
+        frameModule.topmost().navigate({
+			moduleName: "./views/forgotpassword/forgotpassword-page",
+			animated: true
+		});
+        */
+    };
+    
     LoginViewModel.prototype.clearPassword = function () {
         this.password = "";
     };

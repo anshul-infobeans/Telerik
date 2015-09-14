@@ -31,12 +31,20 @@ function pageLoaded(args) {
 	_viewData.set( "imageSource", "~/resources/login/LoginBackground.png" );	
     _viewData.set( "versionNumber", "Version: "+global.appVersion );
 	
+            
     //after 2 sec move to screen
 	setTimeout(function () {
 		frameModule.topmost().navigate({
 			moduleName: "./views/login/login-page",
 			animated: true
 		});
+        
+        /*
+        check with android developer
+        backstackVisibleValue false: It will be available in latest version of Nativescript
+        var activity = applicationModule.android.foregroundActivity();
+    	activity.finishActivity();
+        */
 	}, 500);
     
         }

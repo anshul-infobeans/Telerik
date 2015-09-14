@@ -1,6 +1,7 @@
 body {
 }
 
+/* app logo */
 .app-logo
 {
     margin-bottom: 30;
@@ -8,6 +9,7 @@ body {
     vertical-align:center;
 }
 
+/* input text field and image on right */
 .text-input {
     width: 230;
     font-size: 18;
@@ -22,20 +24,34 @@ body {
     margin-right: 15;
 }
 
+/* login button */
 .login-button {
     width: 280;
     height: 50;
+    font-size: 20;
 }
 
-#remember-me-button
+/* error message */
+.error-message
 {
-    background-image: src("~/res/Login/Checkbox.png")
-}
-
-#text-email-error
-{
-    opacity:0 ;
     font-size: 10; 
     background-color: #EC9700; 
     text-align: center;
+}
+
+/* remember me and forgot password */
+
+#lforgotPassword {
+    margin: 5 0 5 37;
+    text-align: right; 
+}
+#lrememberMe {
+    margin: 5 0 5 5;
+    text-align: left;
+}
+
+.rememberForgot {
+    color: white; 
+    font-size: 12;
+    font-family: Roboto-Bold;
 }

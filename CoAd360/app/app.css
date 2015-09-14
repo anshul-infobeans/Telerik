@@ -33,19 +33,24 @@ Page {
 .policyTerms {
     horizontal-align: center;
     vertical-align:bottom;
-    margin-bottom: 25;
+    margin-bottom: 35;
 }
 
 .policyTermsButton {
-    font-size: 10;
+    font-size: 8;
     color: white;
+    font-family: Roboto-Bold;
+    width: 70;
+    height: 30;
+    text-align: center;
 }
 
 .copyrightText {
     color: white;
     horizontal-align: center;
     vertical-align:bottom;
-    margin-bottom: 10;
-    font-size: 10;
+    margin-bottom: 30;
+    font-size: 8;
+    font-family: Roboto-Bold;
 }
 

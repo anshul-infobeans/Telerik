@@ -55,5 +55,16 @@ application.onUncaughtError = function (error) {
     console.log("Application error: " + error.name + "; " + error.message + "; " + error.nativeError);
 };
 
+if (application.android)
+    {
+        application.android.on(application.AndroidApplication.activityBackPressedEvent, function (args) {
+        console.log("Event: " + args.eventName + ", Activity: " + args.activity);
+            //alert("Event: " + args.eventName + ", Activity: " + args.activity + "Object: " + args.object);
+            //args.cancel = true;
+            //
+        // Set  to cancel back navigation and do something custom.
+    });
+    }
+
 
 application.start();
