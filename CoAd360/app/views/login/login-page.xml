@@ -26,7 +26,7 @@
             <ActivityIndicator busy="{{ isLoading }}" cssClass="activity-indicator" style="margin: 10 0 0 0;" />
     	</StackLayout>
         <StackLayout orientation="horizontal" cssClass="policyTerms">
-            <Label id="privacyPolicy" text="Privacy Policy" cssClass="policyTermsButton" tap="privacyButtonPressed" />
+            <Label id="privacyPolicy" text="Privacy Policy" cssClass="policyTermsButton" tap="privacyPolicyButtonPressed" />
             <Label id="termsOfUser" text="Terms Of Use" cssClass="policyTermsButton" tap="termsOfUseButtonPressed"/>
         </StackLayout>
         <Label text="Copyright C 2014, CoAdvantage, Inc. All Rights Reserved." cssClass="copyrightText" />

@@ -62,15 +62,15 @@ function passwordFieldPressed(args) {
 }
 exports.passwordFieldPressed = passwordFieldPressed;
 
-function privacyPolicyPressed(args) {
+function privacyPolicyButtonPressed(args) {
     viewModel.privacyPolicyPressed();
 }
-exports.privacyPolicyPressed = privacyPolicyPressed;
+exports.privacyPolicyButtonPressed = privacyPolicyButtonPressed;
 
-function termsOfUsePressed(args) {
+function termsOfUseButtonPressed(args) {
     viewModel.termsOfUsePressed();
 }
-exports.termsOfUsePressed = termsOfUsePressed;
+exports.termsOfUseButtonPressed = termsOfUseButtonPressed;
 
 /*
 dismissSoftInput()

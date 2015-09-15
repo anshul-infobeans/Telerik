@@ -198,22 +198,25 @@ var LoginViewModel = (function (_super) {
     
     LoginViewModel.prototype.privacyPolicyPressed = function () {
         //check for platform
-        /*
+        //check for platform
         frameModule.topmost().navigate({
-			moduleName: "./views/forgotpassword/forgotpassword-page",
+			moduleName: "./views/legal/legal-page",
+            context : {
+              title : "Privacy Policy"
+      		},
 			animated: true
 		});
-        */
     };
     
     LoginViewModel.prototype.termsOfUsePressed = function () {
         //check for platform
-        /*
         frameModule.topmost().navigate({
-			moduleName: "./views/forgotpassword/forgotpassword-page",
+			moduleName: "./views/legal/legal-page",
+            context : {
+              title : "Terms Of Use"
+      		},
 			animated: true
 		});
-        */
     };
     
     LoginViewModel.prototype.clearPassword = function () {
