@@ -1,6 +1,16 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
-  <StackLayout>
-    <Label text="Dashboard" style="text-align: center; height: 40; width: 280;"/>
-    <Button text="Logout Q" id="logoutButton" cssClass="logout-button" style="text-align: center; height: 40; width: 280; font-size: 40;" tap="logoutButtonTap" />
-  </StackLayout>
+    <GridLayout rows="*">
+        <Label id="navigationBar" verticalAlignment="top" style="background-color: #8666BC;" />
+        <Image horizontalAlignment="left" verticalAlignment="top" src="~/resources/common/Menu.png" cssClass="menu-button" stretch="aspectFit" tap="menuButtonPressed" />
+        <Button horizontalAlignment="right" verticalAlignment="top" id="logoutButton" text="Log Out" cssClass="logout-button" tap="logoutButtonTap" />
+        <Label id="heading" horizontalAlignment="center" verticalAlignment="top" text="Dashboard" style="font-size: 20; margin: 60 0 0 0; text-align: center;" height="30"/>
+  	</GridLayout>
 </Page>
+
+<!--
+
+
+<Label id="heading" horizontalAlignment="center" text="Dashboard" style="font-size: 20; margin: 60 0 0 0; text-align: center;" height="30"/>
+      	<Label id="tapableArea" horizontalAlignment="left" verticalAlignment="top" width = "60" tap="backButtonPressed"/>
+        <Button id="logoutButton" text="Log Out" cssClass="logout-button" tap="logoutButtonTap" />
+-->

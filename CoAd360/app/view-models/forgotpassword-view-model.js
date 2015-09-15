@@ -18,6 +18,7 @@ var ForgotPasswordViewModel = (function (_super) {
         _super.call(this);
         this._isEmailSelected = true;
         this._username = "";
+        this._lastName = "";
         this._password = "";
     }
     Object.defineProperty(ForgotPasswordViewModel.prototype, "isLoading", {
@@ -59,27 +60,37 @@ var ForgotPasswordViewModel = (function (_super) {
         enumerable: true,
         configurable: true
     });
+    Object.defineProperty(ForgotPasswordViewModel.prototype, "lastName", {
+        get: function () {
+            return this._lastName;
+        },
+        set: function (value) {
+            if (this._lastName !== value) {
+                this._lastName = value;
+                this.notifyPropertyChanged("lastName", value);
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
     ForgotPasswordViewModel.prototype.notifyPropertyChanged = function (propertyName, value) {
-        /*
+        
         // hide all the error
-        this.set( "loginErrorVisibility", "visible" );
         var emailError = frameModule.topmost().getViewById("text-email-error");
-        emailError.style.opacity="0";
-        var loginButton = frameModule.topmost().getViewById("login");
+        emailError.style.visibility="collapsed";
+        
+        var getPasswordButton = frameModule.topmost().getViewById("getPassword");
         
         if (this.validate()) {
-            loginButton.isEnabled=true;
-            loginButton.style.opacity="1";
+            getPasswordButton.isEnabled=true;
+            getPasswordButton.cssClass="get-password-button primaryButtonNormal";
         }
         else {
-            loginButton.isEnabled=false;
-            loginButton.style.opacity="0.5";
+            getPasswordButton.isEnabled=false;
+            getPasswordButton.cssClass="get-password-button primaryButtonUnselected";
         }
         
-       this.set( "loginErrorVisibility", "collapsed" ); 
-       
         this.notify({ object: this, eventName: observable.Observable.propertyChangeEvent, propertyName: propertyName, value: value });
-        */
     };
     
     
@@ -98,74 +109,87 @@ var ForgotPasswordViewModel = (function (_super) {
             }
         }
     };
-    ForgotPasswordViewModel.prototype.login = function () {
+    ForgotPasswordViewModel.prototype.getPasswordButtonPressed = function () {
         var _this = this;
         var message = "";
-        
-        if (this.validate()) {
-            
-            if (utilityModule.validateEmail(this.username))
+        if (this.validate())
             {
-            	this.beginLoading();
+                if (this._isEmailSelected)
+                	{
+            			if (utilityModule.validateEmail(this.username))
+            				{
+            					//this.beginLoading();
                
-                var emailError = frameModule.topmost().getViewById("text-email-error");
-            	emailError.style.opacity="0";
+                				var emailError = frameModule.topmost().getViewById("text-email-error");
+            					emailError.style.visibility="collapsed";
                 
-                frameModule.topmost().navigate({
-					moduleName: "./views/blank/blank",
-					animated: true
-          		});
+                				alert("Request sent for the temporary password");
+            				}
+            			else
+            				{
+               					var emailError = frameModule.topmost().getViewById("text-email-error");
+            					emailError.style.visibility="visible";
+                                
+            				}    
+            
+            
+            
+                            /*serviceModule.service.login(this.username, this.password).then(function (data) {
+                                    frameModule.topmost().navigate({
+                                    moduleName: "./views/login/login-page",
+                                    animated: true
+                                    });
+                                _this.endLoading();
+                            }, function (error) {
+                                _this.clearPassword();
+                                _this.endLoading();
+                            });*/
+            
+            
+        			}
+        		else 
+                	{
+                        alert("Request sent for the temporary password");
+        			}
             }
-            else
+        else
             {
-                var emailError = frameModule.topmost().getViewById("text-email-error");
-            	emailError.style.opacity="1";
-            }    
-            
-            
-            
-            /*serviceModule.service.login(this.username, this.password).then(function (data) {
-                	frameModule.topmost().navigate({
-					moduleName: "./views/login/login-page",
-					animated: true
-					});
-                _this.endLoading();
-            }, function (error) {
-                _this.clearPassword();
-                _this.endLoading();
-            });*/
-            
-            
-        }
-        else {
-            this.clearPassword();
-        }
-        
-        //var loginMessage = frameModule.topmost().getViewById("login-error");
-        //loginMessage.
-        
-        
+                
+            }
     };
     
     ForgotPasswordViewModel.prototype.requestPasswordUsing = function (isEmail) {
         var _this = this;
         
-        this.isEmailSelected = isEmail;
+        this._isEmailSelected = isEmail;
        
         var userNameField = frameModule.topmost().getViewById("tusername");
+        var lastNameField = frameModule.topmost().getViewById("tlastname");
+        var lastNameUIComponent = frameModule.topmost().getViewById("lastName");
+        
         var optionButtonLegalName = frameModule.topmost().getViewById("optionButtonLegalName");
         var optionButtonEmail = frameModule.topmost().getViewById("optionButtonEmail");
+        
+        this.username = "";
+        this.lastName = "";
+        this.password = "";
+        
         if (isEmail)
             {
                 optionButtonEmail.cssClass="optionButton primaryButtonNormal";
                 optionButtonLegalName.cssClass="optionButton primaryButtonUnselected";
                 userNameField.hint="Email";
+                lastNameUIComponent.style.visibility="collapsed";
             }
         else
             {
+                var emailError = frameModule.topmost().getViewById("text-email-error");
+        		emailError.style.visibility="collapsed";
+                
                 optionButtonEmail.cssClass="optionButton primaryButtonUnselected";
                 optionButtonLegalName.cssClass="optionButton primaryButtonNormal";
-                userNameField.hint="Legal Name";
+                userNameField.hint="First Name";
+                lastNameUIComponent.style.visibility="visible";
             }
     };
     
@@ -175,9 +199,18 @@ var ForgotPasswordViewModel = (function (_super) {
         this.password = "";
     };
     ForgotPasswordViewModel.prototype.validate = function () {
+        
         if (!this.username || this.username === "") {
             return false;
         }
+        
+        if (!this._isEmailSelected)
+            {
+                if (!this.lastName || this.lastName === "") {
+            		return false;
+        		}
+            }
+        
         if (!this.password || this.password === "") {
             return false;
         }

@@ -3,6 +3,19 @@ Page {
     font-family: Roboto-Regular;
 }
 
+/* Heading and Top */
+#heading
+{
+    vertical-align: top;
+}
+
+.back-button {
+    width: 26;
+    height: 26;
+    margin-left: 9;
+    margin-top: 9;
+}
+
 /* Primay Button */
 .primaryButtonNormal {
     background-color: #76BD22;

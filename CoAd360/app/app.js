@@ -1,6 +1,7 @@
 var application = require("application");
 application.cssFile = "./app.css";
 application.mainModule = "./views/splash/splash-page";
+//application.mainModule = "./views/forgotpassword/forgotpassword-page";
 
 var fontModule = require("ui/styling/font");
 

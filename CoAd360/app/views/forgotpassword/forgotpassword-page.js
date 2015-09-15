@@ -39,12 +39,8 @@ function pageLoaded(args) {
     //Set the binding context on the page.
 	page.bindingContext = viewModel;
     
-    
-    /*
-    var loginButton = viewModule.getViewById(page, "login");
-    loginButton.style.opacity="0.5";
-    loginButton.isEnabled=false;
-    */
+    var getPasswordButton = viewModule.getViewById(page, "getPassword");
+    getPasswordButton.isEnabled=false;
 };
 exports.pageLoaded = pageLoaded;
 
@@ -63,6 +59,11 @@ function passwordButtonPressed(args) {
     viewModel.requestPasswordUsing(false);
 }
 exports.passwordButtonPressed = passwordButtonPressed;
+
+function getPasswordButtonPressed(args) {
+    viewModel.getPasswordButtonPressed();
+}
+exports.getPasswordButtonPressed = getPasswordButtonPressed;
 
 function backButtonPressed(args) {
     frameModule.topmost().goBack()
