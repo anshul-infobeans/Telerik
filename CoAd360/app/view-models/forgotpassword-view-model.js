@@ -191,8 +191,15 @@ var ForgotPasswordViewModel = (function (_super) {
                 userNameField.hint="First Name";
                 lastNameUIComponent.style.visibility="visible";
             }
+        
+        
+        
+        if (optionButtonEmail.android)
+            {
+                optionButtonEmail.android.setGravity(17);
+				optionButtonLegalName.android.setGravity(17);
+            }   
     };
-    
     
     
     ForgotPasswordViewModel.prototype.clearPassword = function () {

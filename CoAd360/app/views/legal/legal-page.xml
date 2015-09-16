@@ -3,6 +3,6 @@
         <Label id="navigationBar" verticalAlignment="top" style="background-color: #8666BC;" />
         <Image verticalAlignment="top" horizontalAlignment="left" src="~/resources/common/BackButton.png" cssClass="back-button" stretch="aspectFit" tap="backButtonPressed" />
       	<Label id="tapableArea" horizontalAlignment="left" verticalAlignment="top" width = "60" tap="backButtonPressed"/>
-        <Label id="heading" horizontalAlignment="center" verticalAlignment="top" text="Dashboard" style="font-size: 20; margin: 60 0 0 0; text-align: center;" height="30"/>
+        <Label id="heading" horizontalAlignment="center" verticalAlignment="top" text="Dashboard" style="font-size: 20; text-align: center; color: white;" height="44"/>
   	</GridLayout>
 </Page>

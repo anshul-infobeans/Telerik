@@ -13,25 +13,6 @@ function pageLoaded(args) {
     navigationBar.style.height=44;
     tapableArea.style.height=44;
     
-    /*
-    if (!loaded)
-        {
-            //check for platform
-            
-            if (platformModule.device.manufacturer.toUpperCase()==="APPLE")
-    		{
-        		frameModule.topmost().ios.controller.setNavigationBarHiddenAnimated(false, true);
-    		}*/
-    if (page.ios)
-    {
-        //frameModule.topmost().ios.navBarVisibility = "always"; 
-        //frameModule.topmost().ios.controller.setNavigationBarHiddenAnimated(false, true);
-    }
-    else if (page.android)
-    {
-    	//frameModule.topmost().android.actionBar.hide();
-	}
-    
     //Set the binding context on the page.
     viewModel = new changePasswordViewModelModule.ChangePasswordViewModel();
     
@@ -40,6 +21,12 @@ function pageLoaded(args) {
     
     var changePasswordButton = viewModule.getViewById(page, "changePassword");
     changePasswordButton.isEnabled=false;
+    
+    if (page.android)
+    {
+    	var heading = viewModule.getViewById(page, "heading");
+		heading.android.setGravity(17);
+	}
 };
 exports.pageLoaded = pageLoaded;
 

@@ -41,8 +41,7 @@ function loginButtonTap(args) {
 exports.loginButtonTap = loginButtonTap;
 
 function forgotPasswordButtonTap(args) {
-    //viewModel.forgotPassword();
-    alert("Ji");
+    viewModel.forgotPassword();
 }
 exports.forgotPasswordButtonTap = forgotPasswordButtonTap;
 

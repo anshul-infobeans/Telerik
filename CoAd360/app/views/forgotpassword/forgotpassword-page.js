@@ -13,13 +13,16 @@ function pageLoaded(args) {
     navigationBar.style.height=44;
     tapableArea.style.height=44;
     
-    if (page.ios)
+    if (page.android)
     {
+    	var heading = viewModule.getViewById(page, "heading");
+		heading.android.setGravity(17);
+            
+		var optionButtonEmail = viewModule.getViewById(page, "optionButtonEmail");
+		optionButtonEmail.android.setGravity(17);
         
-    }
-    else if (page.android)
-    {
-    	
+        var optionButtonLegalName = viewModule.getViewById(page, "optionButtonLegalName");
+		optionButtonLegalName.android.setGravity(17);
 	}
     
     //Set the binding context on the page.
