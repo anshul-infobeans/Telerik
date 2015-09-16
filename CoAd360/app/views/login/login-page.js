@@ -41,7 +41,8 @@ function loginButtonTap(args) {
 exports.loginButtonTap = loginButtonTap;
 
 function forgotPasswordButtonTap(args) {
-    viewModel.forgotPassword();
+    //viewModel.forgotPassword();
+    alert("Ji");
 }
 exports.forgotPasswordButtonTap = forgotPasswordButtonTap;
 
@@ -71,44 +72,3 @@ function termsOfUseButtonPressed(args) {
     viewModel.termsOfUsePressed();
 }
 exports.termsOfUseButtonPressed = termsOfUseButtonPressed;
-
-/*
-dismissSoftInput()
-
-
-_viewData.set( "username", "How are you" );	
-    var email = viewModule.getViewById(page, "tusername");
-    alert(email.text)
-    
-var options = {
-    title: "Race Selection",
-    message: "Race Chosen: Elf",
-    okButtonText: "OK"
-};
-dialogs.alert(options).then(function () {
-    console.log("Race Chosen!");
-});
-
-$.ajax({
-          type: "POST",
-          url: "https://api.everlive.com/v1/" + apiKey + "/Users/resetpassword",
-          contentType: "application/json",
-          data: JSON.stringify({ Email: this.email }),
-          success: function() {
-              navigator.notification.alert("Your password was successfully reset. Please check your email for instructions on choosing a new password.");
-              window.location.href = "#login";
-          },
-          error: function() {
-              navigator.notification.alert("Unfortunately, an error occurred resetting your password.")
-          }
-      });
-      
-          if (page.ios)
-    {
-        frameModule.topmost().ios.navBarVisibility = "never";    
-    }
-    else if (page.android)
-    {
-    	frameModule.topmost().android.actionBar.hide();
-	} 
-*/

@@ -53,3 +53,13 @@ function menuButtonPressed(args) {
     //frameModule.topmost().goBack()
 }
 exports.menuButtonPressed = menuButtonPressed;
+
+function changePasswordButtonTap(args) {
+    frameModule.topmost().navigate({
+			moduleName: "./views/changepassword/changepassword-page",
+			animated: true
+		});
+}
+exports.changePasswordButtonTap = changePasswordButtonTap;
+
+

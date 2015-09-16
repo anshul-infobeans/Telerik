@@ -13,27 +13,16 @@ function pageLoaded(args) {
     navigationBar.style.height=44;
     tapableArea.style.height=44;
     
-    /*
-    if (!loaded)
-        {
-            //check for platform
-            
-            if (platformModule.device.manufacturer.toUpperCase()==="APPLE")
-    		{
-        		frameModule.topmost().ios.controller.setNavigationBarHiddenAnimated(false, true);
-    		}*/
     if (page.ios)
     {
-        //frameModule.topmost().ios.navBarVisibility = "always"; 
-        //frameModule.topmost().ios.controller.setNavigationBarHiddenAnimated(false, true);
+        
     }
     else if (page.android)
     {
-    	//frameModule.topmost().android.actionBar.hide();
+    	
 	}
     
     //Set the binding context on the page.
-	//page.bindingContext = _viewData;
     viewModel = new forgotPasswordViewModelModule.ForgotPasswordViewModel();
     
     //Set the binding context on the page.
@@ -69,9 +58,3 @@ function backButtonPressed(args) {
     frameModule.topmost().goBack()
 }
 exports.backButtonPressed = backButtonPressed;
-
-/*
-function rememberMeButtonTap(args) {
-    viewModel.rememberMe();
-}
-exports.rememberMeButtonTap = rememberMeButtonTap;*/

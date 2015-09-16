@@ -168,11 +168,6 @@ var LoginViewModel = (function (_super) {
         else {
             this.clearPassword();
         }
-        
-        //var loginMessage = frameModule.topmost().getViewById("login-error");
-        //loginMessage.
-        
-        
     };
     
     LoginViewModel.prototype.rememberMe = function () {
