@@ -7,6 +7,7 @@ var __extends = this.__extends || function (d, b) {
 
 var observable = require("data/observable");
 var frameModule = require("ui/frame");
+var connectivity = require("connectivity");
 
 var DashboardViewModel = (function (_super) {
     __extends(DashboardViewModel, _super);
@@ -22,3 +23,25 @@ var DashboardViewModel = (function (_super) {
     return DashboardViewModel;
 })(observable.Observable);
 exports.DashboardViewModel = DashboardViewModel;
+
+/*
+connectivity.startMonitoring(function (newConnectionType) {
+            //alert("CHECK");
+            var message="Nothing detected";
+            switch (newConnectionType) {
+        		case connectivity.connectionType.none:
+            		message="Connection type changed to none.";
+            		break;
+        		case connectivity.connectionType.wifi:
+            		message="Connection type changed to WiFi.";
+            		break;
+        		case connectivity.connectionType.mobile:
+            		message="Connection type changed to mobile.";
+            		break;
+    		}
+             
+             var networkLabel = frameModule.topmost().getViewById("network");
+             networkLabel.text=message;
+    		}
+        );
+*/

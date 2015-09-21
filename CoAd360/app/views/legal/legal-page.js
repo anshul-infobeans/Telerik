@@ -16,36 +16,12 @@ function pageLoaded(args) {
     var tapableArea = viewModule.getViewById(page, "tapableArea");
     navigationBar.style.height=44;
     tapableArea.style.height=44;
-    /*
-    if (!loaded)
-        {
-            //check for platform
-            
-            if (platformModule.device.manufacturer.toUpperCase()==="APPLE")
-    		{
-        		frameModule.topmost().ios.controller.setNavigationBarHiddenAnimated(false, true);
-    		}*/
-    if (page.ios)
+    
+    if (page.android)
     {
-        //frameModule.topmost().ios.navBarVisibility = "always"; 
-        //frameModule.topmost().ios.controller.setNavigationBarHiddenAnimated(false, true);
-    }
-    else if (page.android)
-    {
-    	//frameModule.topmost().android.actionBar.hide();
+    	var heading = viewModule.getViewById(page, "heading");
+		heading.android.setGravity(17);
 	}
-    
-    //Set the binding context on the page.
-    //viewModel = new dashboardViewModelModule.DashboardViewModel();
-    
-    //Set the binding context on the page.
-	//page.bindingContext = observable;
-    
-    /*
-    var loginButton = viewModule.getViewById(page, "login");
-    loginButton.style.opacity="0.5";
-    loginButton.isEnabled=false;
-    */
 };
 
 

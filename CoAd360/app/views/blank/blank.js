@@ -1,6 +1,7 @@
 var dashboardViewModelModule = require("../../view-models/dashboard-view-model");
 var frameModule = require("ui/frame");
 var viewModule = require("ui/core/view");
+var connectivity = require("connectivity");
 var viewModel;
 
 function pageLoaded(args) {
@@ -10,31 +11,18 @@ function pageLoaded(args) {
     var navigationBar = viewModule.getViewById(page, "navigationBar");
     var tapableArea = viewModule.getViewById(page, "tapableArea");
     navigationBar.style.height=44;
-    //tapableArea.style.height=44;
-    /*
-    if (!loaded)
-        {
-            //check for platform
-            
-            if (platformModule.device.manufacturer.toUpperCase()==="APPLE")
-    		{
-        		frameModule.topmost().ios.controller.setNavigationBarHiddenAnimated(false, true);
-    		}*/
-    if (page.ios)
-    {
-        //frameModule.topmost().ios.navBarVisibility = "always"; 
-        //frameModule.topmost().ios.controller.setNavigationBarHiddenAnimated(false, true);
-    }
-    else if (page.android)
-    {
-    	//frameModule.topmost().android.actionBar.hide();
-	}
     
     //Set the binding context on the page.
     viewModel = new dashboardViewModelModule.DashboardViewModel();
     
     //Set the binding context on the page.
 	page.bindingContext = viewModel;
+    
+    if (page.android)
+    {
+    	var heading = viewModule.getViewById(page, "heading");
+		heading.android.setGravity(17);
+	}
     
     /*
     var loginButton = viewModule.getViewById(page, "login");

@@ -1,5 +1,5 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
-    <GridLayout rows="*">
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded" navigatedTo="navigatedTo" actionBarHidden="true">
+    <GridLayout rows="*" tap="tapOnView">
 		<Image src="{{ imageSource }}" stretch="aspectFill" />
 		<StackLayout verticalAlignment="center" >
             <Image src="~/resources/login/Logo.png" cssClass="app-logo" />

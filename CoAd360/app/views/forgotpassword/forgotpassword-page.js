@@ -1,11 +1,11 @@
 var forgotPasswordViewModelModule = require("../../view-models/forgotpassword-view-model");
 var frameModule = require("ui/frame");
 var viewModule = require("ui/core/view");
+var connectivity = require("connectivity");
 var viewModel;
-
+var page;
 function pageLoaded(args) {
     
-    var page = args.object;
     page = args.object;
     
     var navigationBar = viewModule.getViewById(page, "navigationBar");
@@ -30,17 +30,16 @@ function pageLoaded(args) {
     
     //Set the binding context on the page.
 	page.bindingContext = viewModel;
-    
-    var getPasswordButton = viewModule.getViewById(page, "getPassword");
-    getPasswordButton.isEnabled=false;
 };
 exports.pageLoaded = pageLoaded;
 
-function pageUnloaded(args) {
-
+function navigatedTo(args) {
+    page = args.object;
+    var getPasswordButton = viewModule.getViewById(page, "getPassword");
+    getPasswordButton.isEnabled=false;
+    getPasswordButton.cssClass="get-password-button primaryButtonUnselected";
 }
-
-exports.pageUnloaded = pageUnloaded;
+exports.navigatedTo = navigatedTo;
 
 function emailButtonPressed(args) {
     viewModel.requestPasswordUsing(true);
@@ -53,7 +52,15 @@ function passwordButtonPressed(args) {
 exports.passwordButtonPressed = passwordButtonPressed;
 
 function getPasswordButtonPressed(args) {
-    viewModel.getPasswordButtonPressed();
+    var connectivity = require("connectivity");
+    if (connectivity.getConnectionType()==connectivity.connectionType.none)
+        {
+            alert("Internet connection not available. Please try again later!");
+        }
+    else
+        {
+    		viewModel.getPasswordButtonPressed();
+        }
 }
 exports.getPasswordButtonPressed = getPasswordButtonPressed;
 
@@ -61,3 +68,13 @@ function backButtonPressed(args) {
     frameModule.topmost().goBack()
 }
 exports.backButtonPressed = backButtonPressed;
+
+function tapOnView(args) {
+    var userField = viewModule.getViewById(page, "tusername");
+    userField.dismissSoftInput()
+    var lastName = viewModule.getViewById(page, "tlastname");
+    lastName.dismissSoftInput()
+    var password = viewModule.getViewById(page, "tpassword");
+    password.dismissSoftInput()
+}
+exports.tapOnView = tapOnView;

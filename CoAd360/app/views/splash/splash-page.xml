@@ -1,4 +1,4 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded" cssClass="splash-page" >
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded" cssClass="splash-page" actionBarHidden="true">
     <GridLayout rows="*">
 		<Image src="{{ imageSource }}" stretch="aspectFill" />
 		<Label text="{{ versionNumber }}" cssClass="versionNumber"/>

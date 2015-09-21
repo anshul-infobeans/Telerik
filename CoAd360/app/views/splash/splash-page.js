@@ -5,6 +5,7 @@ var view = require("ui/core/view");
 var frameModule = require("ui/frame");
 var appSettingsModule = require("application-settings");
 var dialogs = require("ui/dialogs");
+var uiaction_bar = require("ui/action-bar");
 
 var _viewData = new observableModule.Observable();
 var page;
@@ -21,8 +22,14 @@ function pageLoaded(args) {
     }
     else if (page.android)
     {
-    	frameModule.topmost().android.actionBar.hide();
+        var actionBar = frameModule.topmost().android.actionBar;
+        actionBar.hide();
+        
+    	//frameModule.topmost().android.actionBar.hide();
+        //frameModule.topmost().android.showActionBar=false;
 	}
+            
+            
     
     //Set the binding context on the page.
 	page.bindingContext = _viewData;
@@ -31,6 +38,7 @@ function pageLoaded(args) {
 	_viewData.set( "imageSource", "~/resources/login/LoginBackground.png" );	
     _viewData.set( "versionNumber", "Version: "+global.appVersion );
 	
+           
             
     //after 2 sec move to screen
 	setTimeout(function () {

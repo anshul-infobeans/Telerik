@@ -36,6 +36,10 @@ var layout;
 })(layout = exports.layout || (exports.layout = {}));
 var ad;
 (function (ad) {
+    function getApplication() { return com.tns.NativeScriptApplication.getInstance(); }
+    ad.getApplication = getApplication;
+    function getApplicationContext() { return getApplication().getApplicationContext(); }
+    ad.getApplicationContext = getApplicationContext;
     var collections;
     (function (collections) {
         function stringArrayToStringSet(str) {

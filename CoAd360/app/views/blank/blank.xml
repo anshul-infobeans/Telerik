@@ -1,9 +1,9 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded" actionBarHidden="true">
     <GridLayout rows="*">
         <Label id="navigationBar" verticalAlignment="top" style="background-color: #8666BC;" />
         <Image horizontalAlignment="left" verticalAlignment="top" src="~/resources/common/Menu.png" cssClass="menu-button" stretch="aspectFit" tap="menuButtonPressed" />
         <Button horizontalAlignment="right" verticalAlignment="top" id="logoutButton" text="Log Out" cssClass="logout-button" tap="logoutButtonTap" />
-        <Label id="heading" horizontalAlignment="center" verticalAlignment="top" text="Dashboard" style="font-size: 20; margin: 60 0 0 0; text-align: center;" height="30"/>
+        <Label id="heading" horizontalAlignment="center" verticalAlignment="top" text="Dashboard" style="font-size: 20; text-align: center; color: white;" height="44"/>
         <Button horizontalAlignment="center" verticalAlignment="bottom" id="changePasswordButton" text="Change Password" cssClass="logout-button" tap="changePasswordButtonTap" />
   	</GridLayout>
 </Page>
