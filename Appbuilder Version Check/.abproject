@@ -1,0 +1,28 @@
+{
+  "ProjectName": "Appbuilder Version Check",
+  "ProjectGuid": "64d3f9a5-258b-47ab-b568-01be4556ea51",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.AppbuilderVersionCheck",
+  "DisplayName": "Appbuilder Version Check",
+  "Author": "",
+  "Description": "Appbuilder Version Check",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{F0A65104-D4F4-4012-B799-F612D75820F6}",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "false",
+  "iOSStatusBarStyle": "Default",
+  "FrameworkVersion": "1.2.3",
+  "Framework": "NativeScript"
+}
