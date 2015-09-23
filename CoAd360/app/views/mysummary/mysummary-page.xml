@@ -1,0 +1,9 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" backgroundColor="#EBEBEB" loaded="pageLoaded">
+  <GridLayout rows="*">
+      <Label id="navigationBar" verticalAlignment="top" style="background-color: #8666BC;" />
+    	<Label id="heading" horizontalAlignment="center" text="My Summary" style="font-size: 20; text-align: center; color: white;" height="44"/>
+      	<Image verticalAlignment="top" horizontalAlignment="left" src="~/resources/common/BackButton.png" cssClass="back-button" stretch="aspectFit" tap="backButtonPressed" />
+      	<Label id="tapableArea" horizontalAlignment="left" verticalAlignment="top" width = "60" tap="backButtonPressed"/>
+    	
+	</GridLayout>
+</Page>

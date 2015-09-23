@@ -50,4 +50,20 @@ function changePasswordButtonTap(args) {
 }
 exports.changePasswordButtonTap = changePasswordButtonTap;
 
+function mySummayPage(args) {
+    frameModule.topmost().navigate({
+			moduleName: "./views/mysummary/mysummary-page",
+			animated: true
+		});
+}
+exports.mySummayPage = mySummayPage;
+
+function checkStubPage(args) {
+    frameModule.topmost().navigate({
+			moduleName: "./views/checkstub/checkstub-page",
+			animated: true
+		});
+}
+exports.checkStubPage = checkStubPage;
+
 

@@ -10,6 +10,7 @@ var appSettingsModule = require("application-settings");
 var frameModule = require("ui/frame");
 var utilityModule = require("../common/utility");
 var platformModule = require("platform");
+var http = require("http");
 
 var LoginViewModel = (function (_super) {
     __extends(LoginViewModel, _super);
@@ -36,14 +37,6 @@ var LoginViewModel = (function (_super) {
                     var savedUserName = appSettingsModule.getString("username");
                     this._username = savedUserName;
                 }
-            
-            /*
-            if (appSettingsModule.hasKey("password"))
-                {
-                    var savedPassword = appSettingsModule.getString("password");
-                    this._password = savedPassword;
-                } 
-                */
         }
         else
         {
@@ -135,7 +128,7 @@ var LoginViewModel = (function (_super) {
             
             if (utilityModule.validateEmail(this.username))
             {
-                appSettingsModule.setString("username",this.username)
+                appSettingsModule.setString("username",this.username);
                 
             	this.beginLoading();
                 
@@ -143,12 +136,31 @@ var LoginViewModel = (function (_super) {
 					moduleName: "./views/blank/blank",
 					animated: true
           		});
+                
+                /*
+                var result;
+				http.request({
+    				url: "https://360apiqa.coadvantage.com/Api/ValidateUser",
+    				method: "POST",
+    				headers: { "Content-Type": "application/json" },
+    				content: JSON.stringify({ "Email": this.username, "Password": this.password, "IPAddress": "178.68.54.53" })
+					}).then(function (response) {
+    					result = response.content.toJSON();
+    					alert(result);
+					}, function (e) {
+    				alert("Error occurred " + e);
+				});
+                
+                */
             }
             else
             {
                 //show error message for email
                 this.set( "emailErrorVisibility", "visible" );
             }    
+            
+            
+            
             
             
             

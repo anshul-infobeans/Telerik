@@ -1,17 +1,19 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded" actionBarHidden="true">
-    <GridLayout rows="*">
-        <Label id="navigationBar" verticalAlignment="top" style="background-color: #8666BC;" />
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded" xmlns:tsb="common/TelerikUI/sidedrawer" actionBarHidden="true">
+    <GridLayout rows="*" style="background-color: #f2f6f7;">
+       	<Label id="navigationBar" verticalAlignment="top" style="background-color: #8666BC;" />
         <Image horizontalAlignment="left" verticalAlignment="top" src="~/resources/common/Menu.png" cssClass="menu-button" stretch="aspectFit" tap="menuButtonPressed" />
         <Button horizontalAlignment="right" verticalAlignment="top" id="logoutButton" text="Log Out" cssClass="logout-button" tap="logoutButtonTap" />
         <Label id="heading" horizontalAlignment="center" verticalAlignment="top" text="Dashboard" style="font-size: 20; text-align: center; color: white;" height="44"/>
         <Button horizontalAlignment="center" verticalAlignment="bottom" id="changePasswordButton" text="Change Password" cssClass="logout-button" tap="changePasswordButtonTap" />
+        <DockLayout verticalAlignment="top" marginTop="44" backgroundColor="#7157A0" height="34">
+            <Image marginLeft="10" dock="left" src="~/resources/dashboard/Search.png" cssClass="input-image" stretch="aspectFit" tap="passwordFieldPressed" height="17" width="17"/>
+            <TextField marginLeft="10" dock="right" id="tsearch" cssClass="text-input" hint="Tap to search" returnKeyType="go" text="{{ search }}"/>
+        </DockLayout>
+        <StackLayout verticalAlignment="top" marginTop="105" height="70" width="280" backgroundColor="white" tap="mySummayPage">
+        	<Label horizontalAlignment="center" verticalAlignment="center" text="My Summary" style="font-size: 20; text-align: center;" height="70"/>
+        </StackLayout>
+        <StackLayout verticalAlignment="top" marginTop="205" height="70" width="280" backgroundColor="white" tap="checkStubPage">
+        	<Label horizontalAlignment="center" verticalAlignment="center" text="Check Stub" style="font-size: 20; text-align: center;" height="70"/>
+        </StackLayout>
   	</GridLayout>
 </Page>
-
-<!--
-
-
-<Label id="heading" horizontalAlignment="center" text="Dashboard" style="font-size: 20; margin: 60 0 0 0; text-align: center;" height="30"/>
-      	<Label id="tapableArea" horizontalAlignment="left" verticalAlignment="top" width = "60" tap="backButtonPressed"/>
-        <Button id="logoutButton" text="Log Out" cssClass="logout-button" tap="logoutButtonTap" />
--->

@@ -42,7 +42,7 @@ exports.navigatedTo = navigatedTo;
 
 function loginButtonTap(args) {
     //args.object.animate({translate: {x:100 y:0}}, 'fast');
-    var connectivity = require("connectivity");
+    
     if (connectivity.getConnectionType()==connectivity.connectionType.none)
         {
             alert("Internet connection not available. Please try again later!");
