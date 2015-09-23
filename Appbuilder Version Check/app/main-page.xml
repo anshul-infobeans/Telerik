@@ -1,3 +1,5 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" >
-  <!-- UI Decalration -->
+    <StackLayout>
+        <Label height="30">Base Version</Label>
+    </StackLayout>
 </Page>
