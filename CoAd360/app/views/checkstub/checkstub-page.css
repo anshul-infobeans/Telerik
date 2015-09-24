@@ -56,21 +56,6 @@ horizontal-align: center;
     font-size: 10;
 }
 
-.policyTerms {
-    horizontal-align: center;
-    vertical-align:bottom;
-    margin-bottom: 25;
-}
-
-.policyTermsButton {
-    font-size: 10;
-}
-
-.get-password-button {
-    margin-top: 10;
-    color: #FFFFFF;
-    font-size: 20;
-    background-color: #72BF38;
-    width: 280;
-    height: 50;
+.dateLabel {
+        background-image: url("http://w3lessons.info/wp-content/uploads/2013/04/HTML-Pie-Chart.png");
 }

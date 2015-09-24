@@ -1,8 +1,26 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" backgroundColor="#EBEBEB" loaded="pageLoaded" actionBarHidden="true">
-  <GridLayout rows="*">
+<Page xmlns="http://www.nativescript.org/tns.xsd" backgroundColor="#EBEBEB" loaded="pageLoaded" actionBarHidden="true" xmlns:chart="nativescript-telerik-ui/chart">
+  <GridLayout rows="*" tap="tapOnView">
       <Label id="navigationBar" verticalAlignment="top" style="background-color: #8666BC;" />
     	<Label id="heading" horizontalAlignment="center" text="Check Stub" style="font-size: 20; text-align: center; color: white;" height="44"/>
       	<Image verticalAlignment="top" horizontalAlignment="left" src="~/resources/common/BackButton.png" cssClass="back-button" stretch="aspectFit" tap="backButtonPressed" />
       	<Label id="tapableArea" horizontalAlignment="left" verticalAlignment="top" width = "60" tap="backButtonPressed"/>
+      <StackLayout verticalAlignment="top" marginTop="44">
+      		<SearchBar text="{{ search }}" hint="Tap to search" cssClass="search" textFieldBackgroundColor="white" id="search" backgroundColor="#7157A0" />
+	        <Label marginTop="5" marginLeft="10" text="Check Stub Date" style="font-size: 15; text-align: left; color: #7A7B7E; font-family: Roboto-Regular;" height="26"/>
+	        <Label id="dateLabel" marginTop="5" marginLeft="10" text="10/1/2015" style="font-size: 15; text-align: left; color: #7A7B7E; font-family: Roboto-Regular;" height="26"/>
+			<Image src="~/resources/dashboard/doughnut-chart.png" width="250" height="250" stretch="aspectFit" />
+          <!--
+          	<Image marginTop="15" src="~/resources/dashboard/default_user_image.png" width="70" height="70" stretch="aspectFit" tap="backButtonPressed" />
+            <Label marginTop="10" text="LUKE MICHAEL HALLAM" style="font-size: 20; text-align: center; color: #76BD23; font-family: Roboto-Bold;" height="26"/>
+            <Label text="Senior UI Designer" style="font-size: 12; text-align: center; color: #7A7B7E; font-family: Roboto-Regular;" height="15"/>
+            <Label marginTop="20" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
+            <DockLayout height ="100" >
+                <Label dock="left" marginLeft="15" text="Address" style="font-size: 14; text-align: left; color: #7A7B7E; font-family: Roboto-Bold;" height="15"/>
+                <Image dock="left" src="~/resources/dashboard/EditIcon.png" width="20" height="20"/>
+                <Label dock="right" textWrap="true" text="123 Mulberry Street Apt. 123" style="font-size: 14; text-align: right; color: #7A7B7E; font-family: Roboto-Regular;" height="80"/>
+            </DockLayout>
+            <Label marginTop="20" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
+		-->
+     	</StackLayout>
 	</GridLayout>
 </Page>
