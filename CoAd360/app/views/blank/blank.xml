@@ -9,10 +9,10 @@
             <Image marginLeft="10" dock="left" src="~/resources/dashboard/Search.png" cssClass="input-image" stretch="aspectFit" tap="passwordFieldPressed" height="17" width="17"/>
             <TextField marginLeft="10" dock="right" id="tsearch" cssClass="text-input" hint="Tap to search" returnKeyType="go" text="{{ search }}"/>
         </DockLayout>
-        <StackLayout verticalAlignment="top" marginTop="105" height="70" width="280" backgroundColor="white" tap="mySummayPage">
+        <StackLayout verticalAlignment="top" marginTop="93" height="70" width="{{ widthOfWidget}}" backgroundColor="white" tap="mySummayPage">
         	<Label horizontalAlignment="center" verticalAlignment="center" text="My Summary" style="font-size: 20; text-align: center;" height="70"/>
         </StackLayout>
-        <StackLayout verticalAlignment="top" marginTop="205" height="70" width="280" backgroundColor="white" tap="checkStubPage">
+        <StackLayout verticalAlignment="top" marginTop="178" height="70" width="{{ widthOfWidget}}" backgroundColor="white" tap="checkStubPage">
         	<Label horizontalAlignment="center" verticalAlignment="center" text="Check Stub" style="font-size: 20; text-align: center;" height="70"/>
         </StackLayout>
   	</GridLayout>

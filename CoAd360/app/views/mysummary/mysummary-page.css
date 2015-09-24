@@ -6,6 +6,18 @@ body {
     vertical-align: top;
 }
 
+.save-button {
+    color: white;
+    font-family: Roboto-Bold;
+    text-align: center; 
+    font-size: 12;
+    height: 40; 
+    width: 70;
+    margin-right: 0;
+    margin-top: 2;
+    background-color: #00E5EE00;
+}
+
 .optionButton {
     width: 140;
     height: 40;

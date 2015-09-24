@@ -7,6 +7,7 @@ var __extends = this.__extends || function (d, b) {
 
 var observable = require("data/observable");
 var frameModule = require("ui/frame");
+var platformModule = require("platform");
 var connectivity = require("connectivity");
 
 var DashboardViewModel = (function (_super) {
@@ -14,6 +15,8 @@ var DashboardViewModel = (function (_super) {
     function DashboardViewModel() {
         _super.call(this);
         
+        var widthOfWidget = platformModule.screen.mainScreen.widthDIPs - 30;
+        this.set( "widthOfWidget", widthOfWidget );
     }
     
     DashboardViewModel.prototype.logout = function () {
