@@ -1,8 +1,7 @@
 
 var frameModule = require("ui/frame");
 var viewModule = require("ui/core/view");
-var dependencyObservableModule = require("ui/core/dependency-observable");
-var viewModel;
+var listPickerModule = require("ui/list-picker");
 var page;
 
 function pageLoaded(args) {
@@ -18,9 +17,14 @@ function pageLoaded(args) {
     	var heading = viewModule.getViewById(page, "heading");
 		heading.android.setGravity(17);
 	}
-    
+    setListPicker();
 };
 exports.pageLoaded = pageLoaded;
+
+function setListPicker() {
+    var listPicker = viewModule.getViewById(page, "listPicker");
+    listPicker.items = ["3/5/2015", "16/7/2015", "1/9/2015"];
+}
 
 function backButtonPressed(args) {
     frameModule.topmost().goBack()
@@ -35,24 +39,29 @@ function tapOnView(args) {
     if (searchBar.ios) {
         searchBar.ios.resignFirstResponder();
     }
+    
+    var listPicker = viewModule.getViewById(page, "listPicker");
+    if (listPicker.style.visibility === "visible") {
+        var selectedDateItem = listPicker.items[listPicker.selectedIndex];
+		var dateLabel = viewModule.getViewById(page, "dateLabel");
+		dateLabel.text = "  " + selectedDateItem;
+        
+        listPicker.style.visibility="collapsed";
+    }
+    
+    
 }
 exports.tapOnView = tapOnView;
 
-var PieDataModel = (function (_super) {
-    __extends(PieDataModel, _super);
-    function PieDataModel() {
-        _super.call(this);
-        this.initData();
-    }
-    PieDataModel.prototype.initData = function () {
-        this.set("pieSource", [
-            { Brand: "Audi", Amount: 10 },
-            { Brand: "Mercedes", Amount: 76 },
-            { Brand: "Fiat", Amount: 60 },
-            { Brand: "BMW", Amount: 24 },
-            { Brand: "Crysler", Amount: 40 }
-        ]);
-    };
-    return PieDataModel;
-})(dependencyObservableModule.DependencyObservable);
-exports.PieDataModel = PieDataModel;
+function tapOnDateLabel(args) {
+    var listPicker = viewModule.getViewById(page, "listPicker");
+    listPicker.style.visibility="visible";
+//    var searchBar = viewModule.getViewById(page, "search");
+//    if (searchBar.android) {
+//        searchBar.android.clearFocus();
+//    }
+//    if (searchBar.ios) {
+//        searchBar.ios.resignFirstResponder();
+//    }
+}
+exports.tapOnDateLabel = tapOnDateLabel;
