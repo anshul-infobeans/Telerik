@@ -10,10 +10,10 @@
             <TextField marginLeft="10" dock="right" id="tsearch" cssClass="text-input" hint="Tap to search" returnKeyType="go" text="{{ search }}"/>
         </DockLayout>
         <StackLayout verticalAlignment="top" marginTop="93" height="70" width="{{ widthOfWidget}}" backgroundColor="white" tap="mySummayPage">
-        	<Label horizontalAlignment="center" verticalAlignment="center" text="My Summary" style="font-size: 20; text-align: center;" height="70"/>
+        	<Label horizontalAlignment="center" verticalAlignment="center" text="My Summary" style="font-size: 16; text-align: center;" height="70"/>
         </StackLayout>
         <StackLayout verticalAlignment="top" marginTop="178" height="70" width="{{ widthOfWidget}}" backgroundColor="white" tap="checkStubPage">
-        	<Label horizontalAlignment="center" verticalAlignment="center" text="Check Stub" style="font-size: 20; text-align: center;" height="70"/>
+        	<Label horizontalAlignment="center" verticalAlignment="center" text="Check Stub" style="font-size: 16; text-align: center;" height="70"/>
         </StackLayout>
   	</GridLayout>
 </Page>

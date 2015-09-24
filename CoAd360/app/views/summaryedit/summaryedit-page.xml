@@ -1,0 +1,14 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" backgroundColor="#EBEBEB" loaded="pageLoaded">
+  <GridLayout rows="*">
+    	<Label id="navigationBar" verticalAlignment="top" style="background-color: #8666BC;" />
+    	<Label id="heading" horizontalAlignment="center" text="Address" style="font-size: 20; text-align: center; color: white;" height="44"/>
+      	<Image verticalAlignment="top" horizontalAlignment="left" src="~/resources/common/BackButton.png" cssClass="back-button" stretch="aspectFit" tap="backButtonPressed" />
+      	<Label id="tapableArea" horizontalAlignment="left" verticalAlignment="top" width = "60" tap="backButtonPressed"/>
+      <StackLayout marginTop="44">
+          <Label verticalAlignment="top" marginTop="10" marginLeft="15" text="Address Line 1" style="font-size: 14; text-align: left; color: #7A7B7E; font-family: Roboto-Bold;" height="15"/>
+          <TextView text="123 Mulberry Street" />
+          <Label verticalAlignment="top" marginTop="10" marginLeft="15" text="Address Line 2" style="font-size: 14; text-align: left; color: #7A7B7E; font-family: Roboto-Bold;" height="15"/>
+          <TextView text="Apt. 123" />
+      </StackLayout>
+	</GridLayout>
+</Page>

@@ -24,8 +24,8 @@ function pageLoaded(args) {
     	var heading = viewModule.getViewById(page, "heading");
 		heading.android.setGravity(17);
 	}
-    var saveButton = viewModule.getViewById(page, "savebutton");
-    saveButton.isEnabled=false;  
+    //var saveButton = viewModule.getViewById(page, "savebutton");
+    //saveButton.isEnabled=false;  
 };
 exports.pageLoaded = pageLoaded;
 
@@ -54,3 +54,13 @@ function tapOnView(args) {
     }
 }
 exports.tapOnView = tapOnView;
+
+function editButtonTap(args) {
+    frameModule.topmost().navigate({
+					moduleName: "./views/summaryEditScreen/summaryEditScreen",
+					animated: true
+          		});
+}
+exports.editButtonTap = editButtonTap;
+
+
