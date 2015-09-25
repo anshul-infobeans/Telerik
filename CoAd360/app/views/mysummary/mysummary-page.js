@@ -57,7 +57,7 @@ exports.tapOnView = tapOnView;
 
 function editButtonTap(args) {
     frameModule.topmost().navigate({
-					moduleName: "./views/summaryEditScreen/summaryEditScreen",
+					moduleName: "./views/summaryedit/summaryedit-page",
 					animated: true
           		});
 }

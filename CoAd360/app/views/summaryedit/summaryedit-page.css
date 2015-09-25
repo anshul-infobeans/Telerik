@@ -1,37 +1,9 @@
 body {
 }
 
-.leftLabel {
-    font-size: 14; 
-    text-align: left; 
-    color: #7A7B7E; 
-    font-family: Roboto-Medium;
-    height: 17
-}
-
-.rightLabel {
-    font-size: 14; 
-    text-align: right; 
-    color: #7A7B7E; 
-    font-family: Roboto-Light;
-    height: 17
-}
-
 #heading
 {
     vertical-align: top;
-}
-
-.edit-button {
-    color: white;
-    font-family: Roboto-Bold;
-    text-align: center; 
-    font-size: 13;
-    height: 40; 
-    width: 70;
-    margin-right: 0;
-    margin-top: 2;
-    background-color: #00E5EE00;
 }
 
 .optionButton {
