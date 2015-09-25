@@ -66,4 +66,12 @@ function checkStubPage(args) {
 }
 exports.checkStubPage = checkStubPage;
 
+function mySummayPage2(args) {
+    frameModule.topmost().navigate({
+			moduleName: "./views/mysummaryV2/mysummary-page",
+			animated: true
+		});
+}
+exports.mySummayPage2 = mySummayPage2;
+
 
