@@ -23,21 +23,9 @@ function pageLoaded(args) {
     {
     	var heading = viewModule.getViewById(page, "heading");
 		heading.android.setGravity(17);
-	}
-    //var saveButton = viewModule.getViewById(page, "savebutton");
-    //saveButton.isEnabled=false;  
+	} 
 };
 exports.pageLoaded = pageLoaded;
-
-function emailButtonPressed(args) {
-    //viewModel.requestPasswordUsing(true);
-}
-exports.emailButtonPressed = emailButtonPressed;
-
-function passwordButtonPressed(args) {
-    //viewModel.requestPasswordUsing(false);
-}
-exports.passwordButtonPressed = passwordButtonPressed;
 
 function backButtonPressed(args) {
     frameModule.topmost().goBack()
@@ -45,7 +33,7 @@ function backButtonPressed(args) {
 exports.backButtonPressed = backButtonPressed;
 
 function tapOnView(args) {
-    var searchBar = viewModule.getViewById(page, "search");
+    var searchBar = viewModule.getViewById(page, "searchField");
     if (searchBar.android) {
         searchBar.android.clearFocus();
     }
