@@ -4,13 +4,11 @@
     	<Label id="heading" horizontalAlignment="center" text="Address" style="font-size: 20; text-align: center; color: white;" height="44"/>
       	<Image verticalAlignment="top" horizontalAlignment="left" src="~/resources/common/BackButton.png" cssClass="back-button" stretch="aspectFit" tap="backButtonPressed" />
       	<Label id="tapableArea" horizontalAlignment="left" verticalAlignment="top" width = "60" tap="backButtonPressed"/>
-      	<StackLayout marginTop="44">
-            <Label horizontalAlignment="left" verticalAlignment="top" marginLeft="15" text="Address Line 1" cssClass="leftLabel" />
-                <!-- <Image horizontalAlignment="left" verticalAlignment="top" marginTop="8" marginLeft="75" src="~/resources/dashboard/EditIcon.png" width="20" height="20"/> -->
-                <Label horizontalAlignment="right" verticalAlignment="top" marginRight="15" textWrap="true" text="123-456-7890" width="{{ infoWidth }}" cssClass="rightLabel" />
-            <Label horizontalAlignment="left" verticalAlignment="top" marginLeft="15" text="Address Line 2" cssClass="leftLabel" />
-                <!-- <Image horizontalAlignment="left" verticalAlignment="top" marginTop="8" marginLeft="75" src="~/resources/dashboard/EditIcon.png" width="20" height="20"/> -->
-                <Label horizontalAlignment="right" verticalAlignment="top" marginRight="15" textWrap="true" text="123-456-7890" width="{{ infoWidth }}" cssClass="rightLabel" />
+      	<StackLayout marginTop="59">
+            <Label verticalAlignment="top" text="Address Line 1" cssClass="titleLabel" width="{{ widthOfWidget }}" />
+            <TextView id="address1"verticalAlignment="top" textWrap="true" text="123-456-7890" width="{{ widthOfWidget }}" cssClass="textField" />
+            <Label marginTop="15" verticalAlignment="top" text="Address Line 2" cssClass="titleLabel" width="{{ widthOfWidget }}" />
+            <TextView id="address2" verticalAlignment="top" textWrap="true" text="123-456-7890" width="{{ widthOfWidget }}" cssClass="textField" />
       </StackLayout>
 	</GridLayout>
 </Page>

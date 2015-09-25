@@ -1,6 +1,20 @@
 body {
 }
 
+.titleLabel {
+    font-size: 14; 
+    text-align: left; 
+    color: #7A7B7E; 
+    font-family: Roboto-Medium;
+}
+
+.textField {
+    font-size: 14; 
+    text-align: left; 
+    color: #7A7B7E; 
+    font-family: Roboto-Light;
+}
+
 #heading
 {
     vertical-align: top;
