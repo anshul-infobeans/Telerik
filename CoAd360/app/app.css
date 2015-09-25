@@ -3,17 +3,43 @@ Page {
     font-family: Roboto-Regular;
 }
 
-/* Heading and Top */
-#heading
-{
+/* Navigation Bar */
+.navigationbar {
     vertical-align: top;
+    background-color: #8666BC;
 }
 
+/* Search Bar */
+.searchbar {
+    background-color: #7157A0;
+}
+
+/* Heading and Top */
+.heading
+{
+    vertical-align: top;
+    horizontal-align: center;
+    font-size: 20; 
+    text-align: center; 
+    color: white;
+    height: 44;
+}
+
+/* Tapable Area for Back Button */
+.back-tapableArea {
+    horizontal-align: left;
+    vertical-align: top;
+    width: 60;
+}
+
+/* Back Button */
 .back-button {
     width: 26;
     height: 26;
     margin-left: 9;
     margin-top: 9;
+    vertical-align: top;
+    horizontal-align: left;
 }
 
 /* Primay Button */
@@ -67,3 +93,47 @@ Page {
     font-family: Roboto-Bold;
 }
 
+.tool-bar-button {
+    background-color: #F2F6F7;
+    height: 44;
+    margin-top: 10;
+}
+
+.tool-bar-button-group {
+    width: 228;
+}
+
+.link-separator {
+    horizontal-align: center;
+    height: 10;
+    width: 1;
+    background-color: #DEDEDE;
+}
+
+.link-separator-left {
+    margin-right: 80;
+}
+
+.link-separator-right {
+    margin-left: 77;
+}
+
+.linkbutton {
+    font-size: 11;
+    font-family: Roboto-Medium;
+    color: #B2B1B1;
+}
+
+.terms-of-use {
+    horizontal-align: center;
+    margin-right: 155;
+}
+
+.privacy-policy {
+    horizontal-align: center;
+}
+
+.contact-us {
+    horizontal-align: center;
+    margin-left: 140;
+}
