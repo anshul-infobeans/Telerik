@@ -1,141 +1,139 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" backgroundColor="#EBEBEB" loaded="pageLoaded" actionBarHidden="true">
-  <GridLayout rows="*" tap="tapOnView">
-      	
-      <ScrollView>	
-      	<StackLayout verticalAlignment="top" marginTop="44">
-      		<SearchBar text="{{ search }}" hint="Tap to search" cssClass="search" textFieldBackgroundColor="white" id="search" backgroundColor="#7157A0" />
-          	<Image marginTop="15" src="~/resources/dashboard/default_user_image.png" width="70" height="70" stretch="aspectFit" tap="backButtonPressed" />
-            <Label marginTop="10" text="LUKE MICHAEL HALLAM" style="font-size: 20; text-align: center; color: #76BD23; font-family: Roboto-Bold;" height="26"/>
-            <Label text="Senior UI Designer" style="font-size: 12; text-align: center; color: #7A7B7E; font-family: Roboto-Regular;" height="15"/>
-            <Label marginTop="20" marginBottom="10" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
-            <GridLayout rows="*" height ="37" >
-                <Label horizontalAlignment="left" verticalAlignment="top" marginLeft="15" text="Address" cssClass="leftLabel" />
-                <!-- <Image horizontalAlignment="left" verticalAlignment="top" marginTop="8" marginLeft="75" src="~/resources/dashboard/EditIcon.png" width="20" height="20"/> -->
-                <Label horizontalAlignment="right" marginTop="-1" verticalAlignment="top" marginRight="15" textWrap="true" text="123 Mulberry Street    Apartment. 123" width="{{ infoWidth }}" cssClass="rightLabel" height="37" />
-            </GridLayout>
-            <Label marginTop="10" marginBottom="10" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
-            <GridLayout rows="*" height ="17" >
-                <Label horizontalAlignment="left" verticalAlignment="top" marginLeft="15" text="City" cssClass="leftLabel" />
-                <!-- <Image horizontalAlignment="left" verticalAlignment="top" marginTop="8" marginLeft="75" src="~/resources/dashboard/EditIcon.png" width="20" height="20"/> -->
-                <Label horizontalAlignment="right" verticalAlignment="top" marginRight="15" textWrap="true" text="New York" width="{{ infoWidth }}" cssClass="rightLabel" />
-            </GridLayout>
-            <Label marginTop="10" marginBottom="10" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
-            <GridLayout rows="*" height ="17" >
-                <Label horizontalAlignment="left" verticalAlignment="top" marginLeft="15" text="State" cssClass="leftLabel" />
-                <!-- <Image horizontalAlignment="left" verticalAlignment="top" marginTop="8" marginLeft="75" src="~/resources/dashboard/EditIcon.png" width="20" height="20"/> -->
-                <Label horizontalAlignment="right" verticalAlignment="top" marginRight="15" textWrap="true" text="NY" width="{{ infoWidth }}" cssClass="rightLabel" />
-            </GridLayout>
-            <Label marginTop="10" marginBottom="10" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
-            <GridLayout rows="*" height ="17" >
-                <Label horizontalAlignment="left" verticalAlignment="top" marginLeft="15" text="Zip" cssClass="leftLabel" />
-                <!-- <Image horizontalAlignment="left" verticalAlignment="top" marginTop="8" marginLeft="75" src="~/resources/dashboard/EditIcon.png" width="20" height="20"/> -->
-                <Label horizontalAlignment="right" verticalAlignment="top" marginRight="15" textWrap="true" text="12345" width="{{ infoWidth }}" cssClass="rightLabel" />
-            </GridLayout>
-            <Label marginTop="10" marginBottom="10" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
-            <GridLayout rows="*" height ="17" >
-                <Label horizontalAlignment="left" verticalAlignment="top" marginLeft="15" text="Home Phone" cssClass="leftLabel" />
-                <!-- <Image horizontalAlignment="left" verticalAlignment="top" marginTop="8" marginLeft="75" src="~/resources/dashboard/EditIcon.png" width="20" height="20"/> -->
-                <Label horizontalAlignment="right" verticalAlignment="top" marginRight="15" textWrap="true" text="123-456-7890" width="{{ infoWidth }}" cssClass="rightLabel" />
-            </GridLayout>
-            <Label marginTop="10" marginBottom="10" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
-            <GridLayout rows="*" height ="17" >
-                <Label horizontalAlignment="left" verticalAlignment="top" marginLeft="15" text="Mobile Phone" cssClass="leftLabel" />
-                <!-- <Image horizontalAlignment="left" verticalAlignment="top" marginTop="8" marginLeft="75" src="~/resources/dashboard/EditIcon.png" width="20" height="20"/> -->
-                <Label horizontalAlignment="right" verticalAlignment="top" marginRight="15" textWrap="true" text="123-456-7890" width="{{ infoWidth }}" cssClass="rightLabel" />
-            </GridLayout>
-            <Label marginTop="10" marginBottom="10" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
-            <GridLayout rows="*" height ="17" >
-                <Label horizontalAlignment="left" verticalAlignment="top" marginLeft="15" text="Personal Email" cssClass="leftLabel" />
-                <!-- <Image horizontalAlignment="left" verticalAlignment="top" marginTop="8" marginLeft="75" src="~/resources/dashboard/EditIcon.png" width="20" height="20"/> -->
-                <Label horizontalAlignment="right" verticalAlignment="top" marginRight="15" textWrap="true" text="lukehallem@gmail.com" width="{{ infoWidth }}" cssClass="rightLabel" />
-            </GridLayout>
-            <Label marginTop="10" marginBottom="10" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
-            <GridLayout rows="*" height ="17" >
-                <Label horizontalAlignment="left" verticalAlignment="top" marginLeft="15" text="Work Email" cssClass="leftLabel" />
-                <!-- <Image horizontalAlignment="left" verticalAlignment="top" marginTop="8" marginLeft="75" src="~/resources/dashboard/EditIcon.png" width="20" height="20"/> -->
-                <Label horizontalAlignment="right" verticalAlignment="top" marginRight="15" textWrap="true" text="lukehallem@gmail.com" width="{{ infoWidth }}" cssClass="rightLabel" />
-            </GridLayout>
-            <Label marginTop="10" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
+	<GridLayout rows="*" tap="tapOnView">
+		<ScrollView>	
+      		<StackLayout cssClass="mainview" >
+      			<SearchBar text="{{ search }}" hint="Tap to search" id="searchField" cssClass="searchbar" />
+          		<Image id="user-profile-image" src="~/resources/dashboard/default_user_image.png" stretch="aspectFit" tap="backButtonPressed" />
+            	<Label id="user-full-name" text="LUKE MICHAEL HALLAM" />
+            	<Label id="user-designation" text="Senior UI Designer" />
+                
+                <Label text="Contact Information" cssClass="sectionheading"/>
+                <Label width="{{ widthOfWidget}}" cssClass="separator" />
+            	<GridLayout>
+                	<Label textWrap="true" text="Address" cssClass="leftLabel" />
+                	<Label textWrap="true" text="123 Mulberry Street Apartment. 123" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator" />
+            	<GridLayout>
+                	<Label textWrap="true" text="City" cssClass="leftLabel" />
+                	<Label textWrap="true" text="New York" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label textWrap="true" text="State" cssClass="leftLabel" />
+                	<Label textWrap="true" text="NY" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label textWrap="true" text="Zip" cssClass="leftLabel" />
+                	<Label textWrap="true" text="12345" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label textWrap="true" text="Home Phone" cssClass="leftLabel" />
+                	<Label textWrap="true" text="123-456-7890" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label textWrap="true" text="Mobile Phone" cssClass="leftLabel" />
+                	<Label textWrap="true" text="123-456-7890" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label textWrap="true" text="Personal Email" cssClass="leftLabel" />
+                	<Label textWrap="true" text="lukehallem@gmail.com" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label textWrap="true" text="Work Email" cssClass="leftLabel" />
+                	<Label textWrap="true" text="fairlylongemailid@coadvantage.com" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
             
-            <Label marginTop="10" text="Personal Detail" style="font-size: 20; text-align: left; color: #76BD23; font-family: Roboto-Bold;" height="26"/>
-            <Label marginTop="20" marginBottom="10" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
-            <GridLayout rows="*" height ="37" >
-                <Label text="Social Security Number" cssClass="leftLabel" />
-                <Label horizontalAlignment="right" marginTop="-1" verticalAlignment="top" marginRight="15" textWrap="true" text="123-45-6789" width="{{ infoWidth }}" cssClass="rightLabel" height="37" />
-            </GridLayout>
-            <Label marginTop="10" marginBottom="10" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
-            <GridLayout rows="*" height ="17" >
-                <Label horizontalAlignment="left" verticalAlignment="top" marginLeft="15" text="Birthdate" cssClass="leftLabel" />
-                <Label horizontalAlignment="right" verticalAlignment="top" marginRight="15" textWrap="true" text="10/20/1980" width="{{ infoWidth }}" cssClass="rightLabel" />
-            </GridLayout>
-            <Label marginTop="10" marginBottom="10" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
-            <GridLayout rows="*" height ="17" >
-                <Label horizontalAlignment="left" verticalAlignment="top" marginLeft="15" text="Age" cssClass="leftLabel" />
-                <Label horizontalAlignment="right" verticalAlignment="top" marginRight="15" textWrap="true" text="35" width="{{ infoWidth }}" cssClass="rightLabel" />
-            </GridLayout>
-            <Label marginTop="10" marginBottom="10" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
-            <GridLayout rows="*" height ="17" >
-                <Label horizontalAlignment="left" verticalAlignment="top" marginLeft="15" text="Gender" cssClass="leftLabel" />
-                <Label horizontalAlignment="right" verticalAlignment="top" marginRight="15" textWrap="true" text="Male" width="{{ infoWidth }}" cssClass="rightLabel" />
-            </GridLayout>
-            <Label marginTop="10" marginBottom="10" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
-            <GridLayout rows="*" height ="17" >
-                <Label horizontalAlignment="left" verticalAlignment="top" marginLeft="15" text="Ethnicity" cssClass="leftLabel" />
-                <Label horizontalAlignment="right" verticalAlignment="top" marginRight="15" textWrap="true" text="Caucasian" width="{{ infoWidth }}" cssClass="rightLabel" />
-            </GridLayout>
-            <Label marginTop="10" marginBottom="10" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
+            	<Label text="Personal Detail" cssClass="sectionheading" />
+            	<Label width="{{ widthOfWidget}}" cssClass="separator" />
+            	<GridLayout>
+                	<Label textWrap="true" text="Social Security Number" cssClass="leftLabel" />
+                	<Label textWrap="true" text="123-45-6789" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator" />
+            	<GridLayout>
+                	<Label textWrap="true" text="Birthdate" cssClass="leftLabel" />
+                	<Label textWrap="true" text="10/20/1980" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label textWrap="true" text="Age" cssClass="leftLabel" />
+                	<Label textWrap="true" text="35" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label textWrap="true" text="Gender" cssClass="leftLabel" />
+                	<Label textWrap="true" text="Male" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label textWrap="true" text="Ethnicity" cssClass="leftLabel" />
+                	<Label textWrap="true" text="Caucasian" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
             
-            <Label marginTop="10" text="Veteran Status" style="font-size: 20; text-align: left; color: #76BD23; font-family: Roboto-Bold;" height="26"/>
-            <Label marginTop="20" marginBottom="10" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
-            <GridLayout rows="*" height ="37" >
-                <Label text="Veteran Status" cssClass="leftLabel" />
-                <Label horizontalAlignment="right" marginTop="-1" verticalAlignment="top" marginRight="15" textWrap="true" text="Veteran" width="{{ infoWidth }}" cssClass="rightLabel" height="37" />
-            </GridLayout>
-            <Label marginTop="10" marginBottom="10" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
-            <GridLayout rows="*" height ="17" >
-                <Label horizontalAlignment="left" verticalAlignment="top" marginLeft="15" text="Other Status" cssClass="leftLabel" />
-                <Label horizontalAlignment="right" verticalAlignment="top" marginRight="15" textWrap="true" text="Smoker, Blind" width="{{ infoWidth }}" cssClass="rightLabel" />
-            </GridLayout>
-            <Label marginTop="10" marginBottom="10" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
-            <GridLayout rows="*" height ="17" >
-                <Label horizontalAlignment="left" verticalAlignment="top" marginLeft="15" text="Nick Name" cssClass="leftLabel" />
-                <Label horizontalAlignment="right" verticalAlignment="top" marginRight="15" textWrap="true" text="N/A" width="{{ infoWidth }}" cssClass="rightLabel" />
-            </GridLayout>
-            <Label marginTop="10" marginBottom="10" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
-            <GridLayout rows="*" height ="17" >
-                <Label horizontalAlignment="left" verticalAlignment="top" marginLeft="15" text="Citizenship" cssClass="leftLabel" />
-                <Label horizontalAlignment="right" verticalAlignment="top" marginRight="15" textWrap="true" text="US" width="{{ infoWidth }}" cssClass="rightLabel" />
-            </GridLayout>
-            <Label marginTop="10" marginBottom="10" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
-            <GridLayout rows="*" height ="17" >
-                <Label horizontalAlignment="left" verticalAlignment="top" marginLeft="15" text="School District Number" cssClass="leftLabel" />
-                <Label horizontalAlignment="right" verticalAlignment="top" marginRight="15" textWrap="true" text="N/A" width="{{ infoWidth }}" cssClass="rightLabel" />
-            </GridLayout>
-            <Label marginTop="10" marginBottom="10" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
+            	<Label text="Veteran Status" cssClass="sectionheading"/>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator" />
+            	<GridLayout>
+                	<Label textWrap="true" text="Veteran Status" cssClass="leftLabel" />
+                	<Label textWrap="true" text="Veteran" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label  textWrap="true" text="Other Status" cssClass="leftLabel" />
+                	<Label  textWrap="true" text="Smoker, Blind" width="{{ infoWidth }}" cssClass="dataLabel" />
+           		</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label  textWrap="true" text="Nick Name" cssClass="leftLabel" />
+                	<Label  textWrap="true" text="N/A" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label  textWrap="true" text="Citizenship" cssClass="leftLabel" />
+                	<Label  textWrap="true" text="United States" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label  textWrap="true" text="School District Number" cssClass="leftLabel" />
+                	<Label  textWrap="true" text="N/A" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
             
-            <Label marginTop="10" text="Emergency Contact Info" style="font-size: 20; text-align: left; color: #76BD23; font-family: Roboto-Bold;" height="26"/>
-            <Label marginTop="20" marginBottom="10" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
-            <GridLayout rows="*" height ="37" >
-                <Label text="Contact Name" cssClass="leftLabel" />
-                <Label horizontalAlignment="right" marginTop="-1" verticalAlignment="top" marginRight="15" textWrap="true" text="Mary Hallan" width="{{ infoWidth }}" cssClass="rightLabel" height="37" />
-            </GridLayout>
-            <Label marginTop="10" marginBottom="10" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
-            <GridLayout rows="*" height ="17" >
-                <Label horizontalAlignment="left" verticalAlignment="top" marginLeft="15" text="Contact Relation" cssClass="leftLabel" />
-                <Label horizontalAlignment="right" verticalAlignment="top" marginRight="15" textWrap="true" text="Wife" width="{{ infoWidth }}" cssClass="rightLabel" />
-            </GridLayout>
-            <Label marginTop="10" marginBottom="10" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
-            <GridLayout rows="*" height ="17" >
-                <Label horizontalAlignment="left" verticalAlignment="top" marginLeft="15" text="Contact Phone" cssClass="leftLabel" />
-                <Label horizontalAlignment="right" verticalAlignment="top" marginRight="15" textWrap="true" text="123-456-7890" width="{{ infoWidth }}" cssClass="rightLabel" />
-            </GridLayout>
-            <Label marginTop="10" marginBottom="10" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
-     	</StackLayout>
-          </ScrollView>
-      <Label id="navigationBar" verticalAlignment="top" style="background-color: #8666BC;" />
-    	<Label id="heading" horizontalAlignment="center" text="My Summary" style="font-size: 20; text-align: center; color: white;" height="44"/>
-      	<Image verticalAlignment="top" horizontalAlignment="left" src="~/resources/common/BackButton.png" cssClass="back-button" stretch="aspectFit" tap="backButtonPressed" />
-      	<Label id="tapableArea" horizontalAlignment="left" verticalAlignment="top" width = "60" tap="backButtonPressed"/>
-      	<Button horizontalAlignment="right" verticalAlignment="top" id="editbutton" text="Edit" cssClass="edit-button" tap="editButtonTap" />
-		</GridLayout>
+            	<Label text="Emergency Contact Info" cssClass="sectionheading"/>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label textWrap="true" text="Contact Name" cssClass="leftLabel" />
+                	<Label textWrap="true" text="Mary Hallan" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label  textWrap="true" text="Contact Relation" cssClass="leftLabel" />
+                	<Label  textWrap="true" text="Wife" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label textWrap="true" text="Contact Phone" cssClass="leftLabel" />
+                	<Label textWrap="true" text="123-456-7890" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+                <GridLayout cssClass="tool-bar-button" >
+                    <Button text="Terms Of Use" cssClass="linkbutton terms-of-use" />
+                    <Label cssClass="link-separator link-separator-left"/>
+                	<Button text="Privacy Policy" cssClass="linkbutton privacy-policy" />
+                    <Label cssClass="link-separator link-separator-right"/>
+                    <Button text="Contact Us" cssClass="linkbutton contact-us" />
+            	</GridLayout>
+     		</StackLayout>
+        </ScrollView>
+	<Label id="navigationBar" cssClass="navigationbar" />
+    <Label id="heading" text="My Summary" cssClass="heading"/>
+    <Image src="~/resources/common/BackButton.png" cssClass="back-button" stretch="aspectFit" tap="backButtonPressed" />
+    <Label id="tapableArea" tap="backButtonPressed"/>
+	</GridLayout>
 </Page>
