@@ -1,0 +1,139 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" backgroundColor="#EBEBEB" loaded="pageLoaded" actionBarHidden="true">
+	<GridLayout rows="*" tap="tapOnView">
+		<ScrollView>	
+      		<StackLayout cssClass="mainview" >
+      			<SearchBar text="{{ search }}" hint="Tap to search" id="searchField" cssClass="searchbar" />
+          		<Image id="user-profile-image" src="~/resources/dashboard/default_user_image.png" stretch="aspectFit" tap="backButtonPressed" />
+            	<Label id="user-full-name" text="LUKE MICHAEL HALLAM" />
+            	<Label id="user-designation" text="Senior UI Designer" />
+                
+                <Label text="Contact Information" cssClass="sectionheading"/>
+                <Label width="{{ widthOfWidget}}" cssClass="separator" />
+            	<GridLayout>
+                	<Label textWrap="true" text="Address" cssClass="leftLabel" />
+                	<Label textWrap="true" text="123 Mulberry Street Apartment. 123" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator" />
+            	<GridLayout>
+                	<Label textWrap="true" text="City" cssClass="leftLabel" />
+                	<Label textWrap="true" text="New York" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label textWrap="true" text="State" cssClass="leftLabel" />
+                	<Label textWrap="true" text="NY" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label textWrap="true" text="Zip" cssClass="leftLabel" />
+                	<Label textWrap="true" text="12345" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label textWrap="true" text="Home Phone" cssClass="leftLabel" />
+                	<Label textWrap="true" text="123-456-7890" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label textWrap="true" text="Mobile Phone" cssClass="leftLabel" />
+                	<Label textWrap="true" text="123-456-7890" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label textWrap="true" text="Personal Email" cssClass="leftLabel" />
+                	<Label textWrap="true" text="lukehallem@gmail.com" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label textWrap="true" text="Work Email" cssClass="leftLabel" />
+                	<Label textWrap="true" text="fairlylongemailid@coadvantage.com" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            
+            	<Label text="Personal Detail" cssClass="sectionheading" />
+            	<Label width="{{ widthOfWidget}}" cssClass="separator" />
+            	<GridLayout>
+                	<Label textWrap="true" text="Social Security Number" cssClass="leftLabel" />
+                	<Label textWrap="true" text="123-45-6789" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator" />
+            	<GridLayout>
+                	<Label textWrap="true" text="Birthdate" cssClass="leftLabel" />
+                	<Label textWrap="true" text="10/20/1980" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label textWrap="true" text="Age" cssClass="leftLabel" />
+                	<Label textWrap="true" text="35" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label textWrap="true" text="Gender" cssClass="leftLabel" />
+                	<Label textWrap="true" text="Male" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label textWrap="true" text="Ethnicity" cssClass="leftLabel" />
+                	<Label textWrap="true" text="Caucasian" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            
+            	<Label text="Veteran Status" cssClass="sectionheading"/>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator" />
+            	<GridLayout>
+                	<Label textWrap="true" text="Veteran Status" cssClass="leftLabel" />
+                	<Label textWrap="true" text="Veteran" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label  textWrap="true" text="Other Status" cssClass="leftLabel" />
+                	<Label  textWrap="true" text="Smoker, Blind" width="{{ infoWidth }}" cssClass="dataLabel" />
+           		</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label  textWrap="true" text="Nick Name" cssClass="leftLabel" />
+                	<Label  textWrap="true" text="N/A" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label  textWrap="true" text="Citizenship" cssClass="leftLabel" />
+                	<Label  textWrap="true" text="United States" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label  textWrap="true" text="School District Number" cssClass="leftLabel" />
+                	<Label  textWrap="true" text="N/A" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            
+            	<Label text="Emergency Contact Info" cssClass="sectionheading"/>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label textWrap="true" text="Contact Name" cssClass="leftLabel" />
+                	<Label textWrap="true" text="Mary Hallan" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label  textWrap="true" text="Contact Relation" cssClass="leftLabel" />
+                	<Label  textWrap="true" text="Wife" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+            	<Label width="{{ widthOfWidget}}" cssClass="separator"/>
+            	<GridLayout>
+                	<Label textWrap="true" text="Contact Phone" cssClass="leftLabel" />
+                	<Label textWrap="true" text="123-456-7890" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+                <GridLayout cssClass="tool-bar-button" >
+                    <Button text="Terms Of Use" cssClass="linkbutton terms-of-use" />
+                    <Label cssClass="link-separator link-separator-left"/>
+                	<Button text="Privacy Policy" cssClass="linkbutton privacy-policy" />
+                    <Label cssClass="link-separator link-separator-right"/>
+                    <Button text="Contact Us" cssClass="linkbutton contact-us" />
+            	</GridLayout>
+     		</StackLayout>
+        </ScrollView>
+	<Label id="navigationBar" cssClass="navigationbar" />
+    <Label id="heading" text="My Summary" cssClass="heading"/>
+    <Image src="~/resources/common/BackButton.png" cssClass="back-button" stretch="aspectFit" tap="backButtonPressed" />
+    <Label id="tapableArea" tap="backButtonPressed"/>
+	</GridLayout>
+</Page>

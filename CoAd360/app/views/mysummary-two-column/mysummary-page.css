@@ -1,0 +1,68 @@
+body {
+}
+
+.mainview {
+    vertical-align: top;
+    margin-top: 44;
+    background-color: white;
+}
+
+#user-profile-image {
+    margin-top: 15;
+    width: 70;
+    height: 70;
+}
+
+#user-full-name {
+    margin-top: 10;
+    font-size: 20;
+    text-align: center;
+    color: #76BD23; 
+    font-family: Roboto-Bold;
+    height: 26;
+}
+
+#user-designation {
+    font-size: 12; 
+    text-align: center; 
+    color: #7A7B7E; 
+    font-family: Roboto-Regular;
+    height: 15;
+    margin-bottom: 10;
+}
+
+.separator {
+    margin-top: 10;
+    margin-bottom: 10;
+    background-color: #DEDEDE;
+    height: 1;
+}
+
+.leftLabel {
+    font-size: 14; 
+    text-align: left; 
+    color: #404040; 
+    font-family: Roboto-Light;
+    horizontal-align:left;
+    vertical-align:top;
+    margin-left: 15;  
+}
+
+.dataLabel {
+    font-size: 14; 
+    text-align: right; 
+    color: #404040; 
+    font-family: Roboto-Regular;
+    margin-right: 15;
+    horizontal-align:right;
+    vertical-align:top;
+}
+
+.sectionheading {
+    font-size: 13; 
+    text-align: left; 
+    color: #8666BC; 
+    font-family: Roboto-Medium;
+    margin-top: 15;
+    margin-left: 15;
+}
