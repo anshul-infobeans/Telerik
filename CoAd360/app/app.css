@@ -7,6 +7,7 @@ Page {
 .navigationbar {
     vertical-align: top;
     background-color: #8666BC;
+    height: 44;
 }
 
 /* Search Bar */
@@ -15,14 +16,15 @@ Page {
 }
 
 /* Heading and Top */
-.heading
+.pageheading
 {
     vertical-align: top;
     horizontal-align: center;
-    font-size: 20; 
+    font-size: 15; 
     text-align: center; 
     color: white;
     height: 44;
+    font-family: Roboto-Medium;
 }
 
 /* Tapable Area for Back Button */
@@ -30,6 +32,7 @@ Page {
     horizontal-align: left;
     vertical-align: top;
     width: 60;
+    height: 44;
 }
 
 /* Back Button */
@@ -136,4 +139,8 @@ Page {
 .contact-us {
     horizontal-align: center;
     margin-left: 140;
+}
+
+.gap {
+    height: 10;
 }
