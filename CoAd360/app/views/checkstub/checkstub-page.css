@@ -1,71 +1,99 @@
 body {
 }
 
-#heading
-{
-    vertical-align: top;
+.border {
+    border-width: 1;
+    border-color: #C0C0C0;
+    margin-top: 5;
 }
 
-.optionButton {
-    width: 140;
-    height: 40;
-    text-align: center;
-}
-
-.options {
-    horizontal-align: center;
-    height: 50;
-    margin-bottom: 30;
-}
-
-#text-email-error {
-    opacity: 0;
-}
-
-/*
-horizontal-align: center;
-    margin-top: 100;
-    vertical-align:top;
-*/
-
-.app-logo
-{
-    margin-bottom: 30;
-    width: 260;
-    vertical-align:center;
-}
-
-.text-input {
-    width: 230;
-    font-size: 18;
-    margin-left: 15;
-    background-color: #00E5EE00;
-}
-
-.input-image {
-    width: 21;
-    height: 21;
-    margin-left: 5;
-    margin-right: 15;
-}
-
-.sub-title {
-    horizontal-align: center;
-    vertical-align:bottom;
+.chart {
+    width: 220;
+    height: 220;
+    margin-top: 10;
     margin-bottom: 10;
-    font-size: 10;
+}
+
+.mainview {
+    vertical-align: top;
+    margin-top: 44;
+    background-color: white;
+}
+
+.separator {
+    margin-top: 10;
+    margin-bottom: 10;
+    background-color: #DEDEDE;
+    height: 1;
+}
+
+.titleLabel {
+    font-size: 14; 
+    text-align: left; 
+    color: #404040; 
+    font-family: Roboto-Light;
+    horizontal-align:left;
+    vertical-align:top;
+    margin-left: 20;  
+}
+
+.dataLabel {
+    font-size: 14; 
+    text-align: right; 
+    color: #404040; 
+    font-family: Roboto-Regular;
+    margin-right: 20;
+    horizontal-align:right;
+    vertical-align:top;
 }
 
 .dateLabel {
-/*    background-image: url('~/resources/dashboard/dropdownicon.png');
-    
-    background-image: url('http://www.telerik.com/sfimages/default-source/blogs/cherry-pie-chart-jpg-jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center; 
-    */
-    
-    border-width:1;
-    border-radius:5;
-    border-color :black;
+    text-align: left;
+    font-size: 14;
+    color: #404040; 
+    font-family: Roboto-Regular;
+    margin-top:5;
+    margin-bottom:5;
+}
+
+.charttitleLabel {
+    font-family: Roboto-Light;
+}
+
+.chartdataLabel {
+    font-family: Roboto-Bold;
+}
+
+.chartLabels {
+    text-align: center;
+    color: #404040; 
+    font-size: 11;
+}
+
+.chart-labels-area {
+    vertical-align: center;
+}
+
+.infocell {
+    margin-top: 5;
+    margin-bottom: 5;
+}
+.sectionheading {
+    font-size: 13; 
+    text-align: left; 
+    color: #8666BC; 
+    font-family: Roboto-Medium;
+    margin-bottom: 10;
+    margin-top: 5;
+    margin-left: 20;
+}
+
+.compensation-report-button {
+    font-size: 11;  
+    color: #76BD23; 
+    font-family: Roboto-Medium;
+}
+
+.compensation-label {
+    font-family: Roboto-Bold;
 }

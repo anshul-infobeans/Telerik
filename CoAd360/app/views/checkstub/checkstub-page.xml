@@ -1,34 +1,100 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" backgroundColor="#EBEBEB" loaded="pageLoaded" actionBarHidden="true">
-  <GridLayout rows="*" tap="tapOnView">
-      <ScrollView>	
-            <StackLayout id="stackContainer" verticalAlignment="top" marginTop="44">
-      			<SearchBar text="{{ search }}" hint="Tap to search" cssClass="search" textFieldBackgroundColor="white" id="search" backgroundColor="#7157A0" />
-	        	<Label marginTop="5" marginLeft="10" text="Check Stub Date" style="font-size: 15; text-align: left; color: #7A7B7E; font-family: Roboto-Regular;" height="26"/>
-	        	<Label id="dateLabel" cssClass="dateLabel" text="  10/1/2015" style="font-size: 15; text-align: left; color: #7A7B7E; font-family: Roboto-Regular; margin: 0 10 0 10;" height="35" tap="tapOnDateLabel"/>
-				<Image src="~/resources/dashboard/doughnut-chart.png" width="250" height="250" stretch="aspectFit" />
-                <GridLayout rows="*" height ="40" >
-                	<Label horizontalAlignment="left" verticalAlignment="top" marginTop="5" marginLeft="0" text="Label 1" style="background-color: green; font-size: 14; text-align: left; color: #7A7B7E; font-family: Roboto-Regular;" height="40"/>
-	                <Label horizontalAlignment="center" verticalAlignment="top" marginTop="5" marginRight="0" text="Label  2" style="background-color: red; font-size: 14; text-align: center; color: #7A7B7E; font-family: Roboto-Regular;" height="40"/>
-                    <Label horizontalAlignment="right" verticalAlignment="top" marginTop="5" marginRight="0" text="Label 3" style="background-color: blue; font-size: 14; text-align: right; color: #7A7B7E; font-family: Roboto-Regular;" height="40"/>
-    	        </GridLayout>
-          <!--
-          	<Image marginTop="15" src="~/resources/dashboard/default_user_image.png" width="70" height="70" stretch="aspectFit" tap="backButtonPressed" />
-            <Label marginTop="10" text="LUKE MICHAEL HALLAM" style="font-size: 20; text-align: center; color: #76BD23; font-family: Roboto-Bold;" height="26"/>
-            <Label text="Senior UI Designer" style="font-size: 12; text-align: center; color: #7A7B7E; font-family: Roboto-Regular;" height="15"/>
-            <Label marginTop="20" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
-            <DockLayout height ="100" >
-                <Label dock="left" marginLeft="15" text="Address" style="font-size: 14; text-align: left; color: #7A7B7E; font-family: Roboto-Bold;" height="15"/>
-                <Image dock="left" src="~/resources/dashboard/EditIcon.png" width="20" height="20"/>
-                <Label dock="right" textWrap="true" text="123 Mulberry Street Apt. 123" style="font-size: 14; text-align: right; color: #7A7B7E; font-family: Roboto-Regular;" height="80"/>
-            </DockLayout>
-            <Label marginTop="20" width="{{ widthOfWidget}}" style="background-color: #DEDEDE;" height="1"/>
-		-->
-			</StackLayout>
-      </ScrollView>
-      <Label id="navigationBar" verticalAlignment="top" style="background-color: #8666BC;" />
-    	<Label id="heading" horizontalAlignment="center" text="Check Stub" style="font-size: 20; text-align: center; color: white;" height="44"/>
-      	<Image verticalAlignment="top" horizontalAlignment="left" src="~/resources/common/BackButton.png" cssClass="back-button" stretch="aspectFit" tap="backButtonPressed" />
-      	<Label id="tapableArea" horizontalAlignment="left" verticalAlignment="top" width = "60" tap="backButtonPressed"/>
-	    <ListPicker id="listPicker" verticalAlignment="bottom" visibility="collapsed"></ListPicker>
+    <GridLayout rows="*" tap="tapOnView">
+		<ScrollView>	
+      		<StackLayout cssClass="mainview" >
+      			<SearchBar text="{{ search }}" hint="Tap to search" id="searchField" cssClass="searchbar" />
+                <Label cssClass="gap" />
+                <Label textWrap="true" text="Check Stub Date" width="{{ widthOfWidget }}" cssClass="titleLabel" />
+                <Border cssClass="border" width="{{ widthOfWidget }}">
+            		<DockLayout width="{{ widthOfWidget }}" >
+                		<Label dock="left" width="{{ widthOfWidget-30 }}" id="tdatepicker" cssClass="text-input dateLabel" text="5/1/2015"/>
+                	</DockLayout>
+     			</Border>
+                
+                <GridLayout>
+                	<Image src="~/resources/dashboard/doughnut-chart.png" cssClass="chart" stretch="aspectFill" />
+                    <StackLayout cssClass="chart-labels-area">
+                        <Label textWrap="true" text="Total Net Pay" width="{{ widthOfWidget }}" cssClass="chartLabels charttitleLabel" />
+                		<Label textWrap="true" text="$2,523.47" width="{{ widthOfWidget }}" cssClass="chartLabels chartdataLabel" />
+                    </StackLayout>
+                </GridLayout>
+                
+                <Label width="{{ widthOfWidget }}" cssClass="separator" />
+                
+               	<Label text="EARNINGS" cssClass="sectionheading"/>
+            	<GridLayout cssClass="infocell">
+                	<Label textWrap="true" text="Regular Pay" width="{{ infoWidth }}" cssClass="titleLabel" />
+                	<Label textWrap="true" text="$3,483.27" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+                <GridLayout cssClass="infocell">
+                	<Label textWrap="true" text="Reimbursement Expenses" width="{{ infoWidth }}" cssClass="titleLabel" />
+                	<Label textWrap="true" text="$63.46" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+                
+                <Label width="{{ widthOfWidget}}" cssClass="separator" />
+                
+               	<Label text="TAXES" cssClass="sectionheading"/>
+            	<GridLayout cssClass="infocell">
+                	<Label textWrap="true" text="Federal Income Tax" width="{{ infoWidth }}" cssClass="titleLabel" />
+                	<Label textWrap="true" text="$475.00" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+                <GridLayout cssClass="infocell">
+                	<Label textWrap="true" text="Medicare" width="{{ infoWidth }}" cssClass="titleLabel" />
+                	<Label textWrap="true" text="$25.00" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+                <GridLayout cssClass="infocell" >
+                	<Label textWrap="true" text="Medicare" width="{{ infoWidth }}" cssClass="titleLabel" />
+                	<Label textWrap="true" text="$25.00" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+                
+                <Label width="{{ widthOfWidget}}" cssClass="separator" />
+                
+                <Label text="DEDUCTIONS" cssClass="sectionheading"/>
+            	<GridLayout cssClass="infocell" >
+                	<Label textWrap="true" text="Medical Insurance" width="{{ infoWidth }}" cssClass="titleLabel" />
+                	<Label textWrap="true" text="$45.00" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+                <GridLayout cssClass="infocell" >
+                	<Label textWrap="true" text="Dental Insurance" width="{{ infoWidth }}" cssClass="titleLabel" />
+                	<Label textWrap="true" text="$11.60" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+                <GridLayout cssClass="infocell" >
+                	<Label textWrap="true" text="Life Insurance" width="{{ infoWidth }}" cssClass="titleLabel" />
+                	<Label textWrap="true" text="$420.37" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+                <GridLayout cssClass="infocell" >
+                	<Label textWrap="true" text="401K Contribution" width="{{ infoWidth }}" cssClass="titleLabel" />
+                	<Label textWrap="true" text="$20.00" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+                <GridLayout cssClass="infocell" >
+                	<Label textWrap="true" text="401K Loan" width="{{ infoWidth }}" cssClass="titleLabel" />
+                	<Label textWrap="true" text="$20.06" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</GridLayout>
+                
+                <Label width="{{ widthOfWidget}}" cssClass="separator" />
+                
+                <GridLayout cssClass="infocell" >
+                	<Label textWrap="true" text="TOTAL:" width="{{ infoWidth }}" cssClass="titleLabel compensation-label" />
+                	<Label textWrap="true" text="$2,523.47" width="{{ infoWidth }}" cssClass="dataLabel compensation-label" />
+            	</GridLayout>
+                
+                <Label width="{{ widthOfWidget}}" cssClass="separator" />
+                
+                <Button text="Total Compensation Report" cssClass="compensation-report-button" />
+                
+                
+                <GridLayout cssClass="tool-bar-button" >
+                    <Button text="Terms Of Use" cssClass="linkbutton terms-of-use" />
+                    <Label cssClass="link-separator link-separator-left"/>
+                	<Button text="Privacy Policy" cssClass="linkbutton privacy-policy" />
+                    <Label cssClass="link-separator link-separator-right"/>
+                    <Button text="Contact Us" cssClass="linkbutton contact-us" />
+            	</GridLayout>
+     		</StackLayout>
+        </ScrollView>
+        <Label id="navigationBar" cssClass="navigationbar" />
+    	<Label id="heading" text="CHECK STUB" cssClass="pageheading"/>
+    	<Image src="~/resources/common/BackButton.png" cssClass="back-button" stretch="aspectFit" tap="backButtonPressed" />
+    	<Label id="tapableArea" tap="backButtonPressed" cssClass="back-tapableArea"/>
 	</GridLayout>
 </Page>
