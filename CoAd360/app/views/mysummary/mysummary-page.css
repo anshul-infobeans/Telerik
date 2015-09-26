@@ -9,9 +9,8 @@ body {
 
 #user-profile-image {
     margin-top: 15;
-    margin-left: 15;
-    width: 47;
-    height: 47;
+    width: 70;
+    height: 70;
 }
 
 #user-full-name {
@@ -19,7 +18,7 @@ body {
     font-size: 20;
     text-align: center;
     color: #76BD23; 
-    font-family: Roboto-Light;
+    font-family: Roboto-Regular;
     height: 26;
 }
 
