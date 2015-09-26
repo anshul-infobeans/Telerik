@@ -209,7 +209,7 @@ var LoginViewModel = (function (_super) {
         frameModule.topmost().navigate({
 			moduleName: "./views/legal/legal-page",
             context : {
-              title : "Privacy Policy"
+              title : "PRIVACY POLICY"
       		},
 			animated: true
 		});
@@ -220,7 +220,7 @@ var LoginViewModel = (function (_super) {
         frameModule.topmost().navigate({
 			moduleName: "./views/legal/legal-page",
             context : {
-              title : "Terms Of Use"
+              title : "TERMS OF USE"
       		},
 			animated: true
 		});
