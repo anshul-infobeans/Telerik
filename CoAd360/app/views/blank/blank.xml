@@ -17,9 +17,9 @@
         <StackLayout verticalAlignment="top" marginTop="358" height="70" width="{{ widthOfWidget}}" backgroundColor="white" tap="mySummayPage2">
         	<Label horizontalAlignment="center" verticalAlignment="center" text="My Summary V2" style="font-size: 20; text-align: center;" height="70"/>
         </StackLayout>
-       	<Label id="navigationBar" verticalAlignment="top" style="background-color: #8666BC;" />
-        <Image horizontalAlignment="left" verticalAlignment="top" src="~/resources/common/Menu.png" cssClass="menu-button" stretch="aspectFit" tap="menuButtonPressed" />
-        <Button horizontalAlignment="right" verticalAlignment="top" id="logoutButton" text="Log Out" cssClass="logout-button" tap="logoutButtonTap" />
-        <Label id="heading" horizontalAlignment="center" verticalAlignment="top" text="Dashboard" style="font-size: 20; text-align: center; color: white;" height="44"/>
+        <Label id="navigationBar" cssClass="navigationbar" />
+    	<Label id="heading" text="DASHBOARD" cssClass="pageheading"/>
+    	<Image src="~/resources/common/BackButton.png" cssClass="back-button" stretch="aspectFit" tap="backButtonPressed" />
+    	<Label id="tapableArea" tap="backButtonPressed" cssClass="back-tapableArea"/>
   	</GridLayout>
 </Page>
