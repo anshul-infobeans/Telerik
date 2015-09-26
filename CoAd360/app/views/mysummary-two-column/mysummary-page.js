@@ -8,11 +8,6 @@ function pageLoaded(args) {
     
     page = args.object;
     
-    var navigationBar = viewModule.getViewById(page, "navigationBar");
-    var tapableArea = viewModule.getViewById(page, "tapableArea");
-    navigationBar.style.height=44;
-    tapableArea.style.height=44;
-    
     //Set the binding context on the page.
     viewModel = new mySummaryViewModelModule.MySummaryViewModel();
     
