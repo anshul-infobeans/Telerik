@@ -157,8 +157,8 @@
      		</StackLayout>
         </ScrollView>
 	<Label id="navigationBar" cssClass="navigationbar" />
-    <Label id="heading" text="My Summary" cssClass="heading"/>
+    <Label id="heading" text="PERSONAL INFO" cssClass="heading"/>
     <Image src="~/resources/common/BackButton.png" cssClass="back-button" stretch="aspectFit" tap="backButtonPressed" />
-    <Label id="tapableArea" tap="backButtonPressed"/>
+    <Label id="tapableArea" tap="backButtonPressed" cssClass="back-tapableArea" />
 	</GridLayout>
 </Page>
