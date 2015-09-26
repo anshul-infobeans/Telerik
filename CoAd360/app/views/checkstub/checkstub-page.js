@@ -17,14 +17,16 @@ function pageLoaded(args) {
     	var heading = viewModule.getViewById(page, "heading");
 		heading.android.setGravity(17);
 	}
-    //setListPicker();
+    
+    //Set up the date picker
+    var datePicker = viewModule.getViewById(page, "datePicker");
+    datePicker.year = 2015;
+ 	datePicker.month = 1;
+	datePicker.day = 5;
+	datePicker.minDate = new Date(2000, 1, 1);
+	datePicker.maxDate = new Date();
 };
 exports.pageLoaded = pageLoaded;
-
-function setListPicker() {
-    //var listPicker = viewModule.getViewById(page, "listPicker");
-    //listPicker.items = ["3/5/2015", "16/7/2015", "1/9/2015"];
-}
 
 function backButtonPressed(args) {
     frameModule.topmost().goBack()
@@ -33,36 +35,29 @@ exports.backButtonPressed = backButtonPressed;
 
 function tapOnView(args) {
     
-    var searchBar = viewModule.getViewById(page, "search");
+    var searchBar = viewModule.getViewById(page, "searchField");
     if (searchBar.android) {
         searchBar.android.clearFocus();
     }
     if (searchBar.ios) {
         searchBar.ios.resignFirstResponder();
     }
-    /*
-    var listPicker = viewModule.getViewById(page, "listPicker");
-    if (listPicker.style.visibility === "visible") {
-        var selectedDateItem = listPicker.items[listPicker.selectedIndex];
-		var dateLabel = viewModule.getViewById(page, "dateLabel");
-		dateLabel.text = "  " + selectedDateItem;
-        
-        listPicker.style.visibility="collapsed";
-    }
-    */
     
+    var datePicker = viewModule.getViewById(page, "datePicker");
+    if (datePicker.style.visibility === "visible") {
+        var selectedDateItem = datePicker.day + "/" + datePicker.month + "/" + datePicker.year;
+		var dateLabel = viewModule.getViewById(page, "tdatepicker");
+		dateLabel.text = selectedDateItem;
+        
+        datePicker.style.visibility="collapsed";
+    }
 }
 exports.tapOnView = tapOnView;
 
-function tapOnDateLabel(args) {
-    var listPicker = viewModule.getViewById(page, "listPicker");
-    listPicker.style.visibility="visible";
-//    var searchBar = viewModule.getViewById(page, "search");
-//    if (searchBar.android) {
-//        searchBar.android.clearFocus();
-//    }
-//    if (searchBar.ios) {
-//        searchBar.ios.resignFirstResponder();
-//    }
+function datePickerPressed(args) {
+    
+    var datePicker = viewModule.getViewById(page, "datePicker");
+    datePicker.style.visibility="visible";
+    
 }
-exports.tapOnDateLabel = tapOnDateLabel;
+exports.datePickerPressed = datePickerPressed;

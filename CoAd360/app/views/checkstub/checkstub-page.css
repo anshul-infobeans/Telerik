@@ -97,3 +97,55 @@ body {
 .compensation-label {
     font-family: Roboto-Bold;
 }
+
+.chart-legend-area {
+    margin-top:10;
+    margin-bottom:5;
+}
+
+.legend-earning {
+    background-color: #4284BE;
+} 
+.legend-earning-label {
+    color: #4284BE;
+} 
+
+.legend-tax {
+    background-color: #E17443;
+}
+.legend-tax-label {
+    color: #E17443;
+} 
+
+.legend-deduction {
+    background-color: #E89725;
+}
+.legend-deduction-label {
+    color: #E89725;
+} 
+
+.legends {
+    height: 14;
+    width: 14;
+    horizontal-align:left;
+    vertical-align:top;
+}
+
+.legend-label {
+    font-size: 12;  
+    font-family: Roboto-Light;
+    margin-left: 24;
+}
+
+.legend-title-label {
+    font-size: 12;  
+    font-family: Roboto-Light;
+    color: #404040;
+    margin-left: 24;
+}
+
+#datePicker {
+    vertical-align: bottom;
+    background-color: white;
+}
+

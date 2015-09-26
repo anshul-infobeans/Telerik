@@ -5,7 +5,7 @@
       			<SearchBar text="{{ search }}" hint="Tap to search" id="searchField" cssClass="searchbar" />
                 <Label cssClass="gap" />
                 <Label textWrap="true" text="Check Stub Date" width="{{ widthOfWidget }}" cssClass="titleLabel" />
-                <Border cssClass="border" width="{{ widthOfWidget }}">
+                <Border cssClass="border" width="{{ widthOfWidget }}" tap="datePickerPressed">
             		<DockLayout width="{{ widthOfWidget }}" >
                 		<Label dock="left" width="{{ widthOfWidget-30 }}" id="tdatepicker" cssClass="text-input dateLabel" text="5/1/2015"/>
                 	</DockLayout>
@@ -18,6 +18,30 @@
                 		<Label textWrap="true" text="$2,523.47" width="{{ widthOfWidget }}" cssClass="chartLabels chartdataLabel" />
                     </StackLayout>
                 </GridLayout>
+                
+                <StackLayout orientation="horizontal" width="{{ widthOfWidget }}" cssClass="chart-legend-area">
+                    <GridLayout width="{{ (widthOfWidget/3) }}" >
+                        <Label cssClass="legend-earning legends" />
+                        <StackLayout>
+                            <Label textWrap="true" text="Earnings" width="{{ (widthOfWidget/3-24) }}" cssClass="legend-title-label" />
+                            <Label textWrap="true" text="$3,546.73" width="{{ (widthOfWidget/3-24) }}" cssClass="legend-earning-label legend-label" />
+                        </StackLayout>
+                    </GridLayout> 
+                    <GridLayout width="{{ (widthOfWidget/3) }}" >
+                        <Label cssClass="legend-tax legends" />
+                        <StackLayout>
+                            <Label textWrap="true" text="Taxes" width="{{ (widthOfWidget/3-24) }}" cssClass="legend-title-label" />
+                            <Label textWrap="true" text="$735.51" width="{{ (widthOfWidget/3-24) }}" cssClass="legend-tax-label legend-label" />
+                        </StackLayout>
+                    </GridLayout> 
+                    <GridLayout width="{{ (widthOfWidget/3) }}">
+                        <Label cssClass="legend-deduction legends" />
+                        <StackLayout>
+                            <Label textWrap="true" text="Deductions" width="{{ (widthOfWidget/3-24) }}" cssClass="legend-title-label" />
+                            <Label textWrap="true" text="$517.03" width="{{ (widthOfWidget/3-24) }}" cssClass="legend-deduction-label legend-label" />
+                        </StackLayout>
+                    </GridLayout> 
+                </StackLayout>
                 
                 <Label width="{{ widthOfWidget }}" cssClass="separator" />
                 
@@ -96,5 +120,6 @@
     	<Label id="heading" text="CHECK STUB" cssClass="pageheading"/>
     	<Image src="~/resources/common/BackButton.png" cssClass="back-button" stretch="aspectFit" tap="backButtonPressed" />
     	<Label id="tapableArea" tap="backButtonPressed" cssClass="back-tapableArea"/>
+        <DatePicker id="datePicker" visibility="collapsed"></DatePicker>
 	</GridLayout>
 </Page>
