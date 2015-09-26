@@ -15,7 +15,7 @@ var MySummaryViewModel = (function (_super) {
     function MySummaryViewModel() {
         _super.call(this);
         
-        var widthOfWidget = platformModule.screen.mainScreen.widthDIPs - 30;
+        var widthOfWidget = platformModule.screen.mainScreen.widthDIPs - 40;
         this.set( "widthOfWidget", widthOfWidget );
         var infoWidth = widthOfWidget/2;
         this.set( "infoWidth", infoWidth );
