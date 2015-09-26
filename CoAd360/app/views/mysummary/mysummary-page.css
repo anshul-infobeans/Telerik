@@ -45,7 +45,7 @@ body {
     font-family: Roboto-Light;
     horizontal-align:left;
     vertical-align:top;
-    margin-left: 15;  
+    margin-left: 20;  
 }
 
 .dataLabel {
@@ -53,7 +53,7 @@ body {
     text-align: right; 
     color: #404040; 
     font-family: Roboto-Regular;
-    margin-right: 15;
+    margin-right: 20;
     horizontal-align:right;
     vertical-align:top;
 }
@@ -64,5 +64,5 @@ body {
     color: #8666BC; 
     font-family: Roboto-Medium;
     margin-top: 15;
-    margin-left: 15;
+    margin-left: 20;
 }
