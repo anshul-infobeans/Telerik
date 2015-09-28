@@ -1,25 +1,31 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded" xmlns:tsb="common/TelerikUI/sidedrawer" actionBarHidden="true">
-    <GridLayout rows="*" style="background-color: #f2f6f7;">
-            <Button horizontalAlignment="center" verticalAlignment="bottom" id="changePasswordButton" text="Change Password" cssClass="logout-button" tap="changePasswordButtonTap" />
-        <DockLayout verticalAlignment="top" marginTop="44" backgroundColor="#7157A0" height="34">
-            <Image marginLeft="10" dock="left" src="~/resources/dashboard/Search.png" cssClass="input-image" stretch="aspectFit" tap="passwordFieldPressed" height="17" width="17"/>
-            <TextField marginLeft="10" dock="right" id="tsearch" cssClass="text-input" hint="Tap to search" returnKeyType="go" text="{{ search }}"/>
-        </DockLayout>
-        <StackLayout verticalAlignment="top" marginTop="93" height="70" width="{{ widthOfWidget}}" backgroundColor="white" tap="mySummayPage">
-        	<Label horizontalAlignment="center" verticalAlignment="center" text="My Summary" style="font-size: 20; text-align: center;" height="70"/>
-        </StackLayout>
-        <StackLayout verticalAlignment="top" marginTop="178" height="70" width="{{ widthOfWidget}}" backgroundColor="white" tap="checkStubPage">
-        	<Label horizontalAlignment="center" verticalAlignment="center" text="Check Stub" style="font-size: 20; text-align: center;" height="70"/>
-        </StackLayout>
-        <StackLayout verticalAlignment="top" marginTop="268" height="70" width="{{ widthOfWidget}}" backgroundColor="white" tap="mySummayPageTwoColumn">
-        	<Label horizontalAlignment="center" verticalAlignment="center" text="My Summary Two Column" style="font-size: 20; text-align: center;" height="70"/>
-        </StackLayout>
-        <StackLayout verticalAlignment="top" marginTop="358" height="70" width="{{ widthOfWidget}}" backgroundColor="white" tap="mySummayPage2">
-        	<Label horizontalAlignment="center" verticalAlignment="center" text="My Summary V2" style="font-size: 20; text-align: center;" height="70"/>
+    <GridLayout rows="*">
+        <Button id="changePasswordButton" text="Change Password" cssClass="change-password-button" tap="changePasswordButtonTap" />
+        <StackLayout cssClass="main-view">
+        	<DockLayout verticalAlignment="top" marginTop="44" backgroundColor="#7157A0" height="34">
+            	<Image marginLeft="10" dock="left" src="~/resources/dashboard/Search.png" cssClass="input-image" stretch="aspectFit" tap="passwordFieldPressed" height="17" width="17"/>
+            	<TextField marginLeft="10" dock="right" id="tsearch" cssClass="text-input" hint="Tap to search" returnKeyType="go" text="{{ search }}"/>
+        	</DockLayout>
+            <GridLayout width="{{ widthOfWidget}}" cssClass="widget" tap="mySummayPage">
+        		<Label text="My Summary" cssClass="widget-label"/>
+       		</GridLayout>
+        	<GridLayout width="{{ widthOfWidget}}" cssClass="widget" tap="checkStubPage">
+        		<Label text="Check Stub" cssClass="widget-label"/>
+        	</GridLayout>
+        	<GridLayout width="{{ widthOfWidget}}" cssClass="widget" tap="mySummayPageTwoColumn">
+        		<Label text="My Summary Two Column" cssClass="widget-label"/>
+        	</GridLayout>
+        	<GridLayout width="{{ widthOfWidget}}" cssClass="widget" tap="mySummayPage2">
+        		<Label text="My Summary V2" cssClass="widget-label"/>
+        	</GridLayout>
+            <GridLayout width="{{ widthOfWidget}}" cssClass="widget" tap="mySummayPage3">
+        		<Label text="My Summary V3" cssClass="widget-label"/>
+        	</GridLayout>
         </StackLayout>
         <Label id="navigationBar" cssClass="navigationbar" />
     	<Label id="heading" text="DASHBOARD" cssClass="pageheading"/>
-    	<Image src="~/resources/common/BackButton.png" cssClass="back-button" stretch="aspectFit" tap="backButtonPressed" />
+    	<Image src="~/resources/common/Menu.png" cssClass="back-button" stretch="aspectFit" tap="backButtonPressed" />
     	<Label id="tapableArea" tap="backButtonPressed" cssClass="back-tapableArea"/>
+        <Button horizontalAlignment="right" verticalAlignment="top" id="logoutButton" text="Log Out" cssClass="logout-button" tap="logoutButtonTap" />
   	</GridLayout>
 </Page>

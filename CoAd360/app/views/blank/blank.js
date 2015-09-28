@@ -74,6 +74,14 @@ function mySummayPage2(args) {
 }
 exports.mySummayPage2 = mySummayPage2;
 
+function mySummayPage3(args) {
+    frameModule.topmost().navigate({
+			moduleName: "./views/mysummaryV3/mysummary-page",
+			animated: true
+		});
+}
+exports.mySummayPage3 = mySummayPage3;
+
 function mySummayPageTwoColumn(args) {
     frameModule.topmost().navigate({
 			moduleName: "./views/mysummary-two-column/mysummary-page",

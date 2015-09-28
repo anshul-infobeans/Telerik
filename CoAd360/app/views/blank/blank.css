@@ -13,9 +13,32 @@ body {
     margin-top: 2;
     background-color: #00E5EE00;
 }
+
 .menu-button {
     width: 26;
     height: 26;
     margin-left: 9;
     margin-top: 9;
+}
+
+.change-password {
+    horizontal-align: center;
+    vertical-align: bottom;
+}
+
+.change-password-button {
+    vertical-align: bottom;
+}
+
+.widget-label {
+    font-size: 20;
+    text-align: center;
+    height: 70;
+}
+
+.widget {
+    vertical-align: top;
+    margin-top: 10;
+    height: 70;
+    background-color: white;
 }
