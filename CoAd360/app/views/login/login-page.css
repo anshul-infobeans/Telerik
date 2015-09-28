@@ -1,5 +1,6 @@
 body {
 }
+@login-field-width: 280;
 
 /* app logo */
 .app-logo
@@ -7,14 +8,6 @@ body {
     margin-bottom: 30;
     width: 260;
     vertical-align:center;
-}
-
-/* input text field and image on right */
-.text-input {
-    width: 230;
-    font-size: 18;
-    margin-left: 15;
-    background-color: #00E5EE00;
 }
 
 .input-image {
@@ -31,27 +24,37 @@ body {
     font-size: 20;
 }
 
-/* error message */
-.error-message
-{
-    font-size: 10; 
-    background-color: #EC9700; 
-    text-align: center;
-}
-
 /* remember me and forgot password */
-
 #lforgotPassword {
-    margin: 5 0 5 37;
     text-align: right; 
+    width: 120;
+    horizontal-align: right;
 }
 #lrememberMe {
-    margin: 5 0 5 5;
     text-align: left;
+    margin-left: 38;
+    width: 90;
+    horizontal-align: left;
+}
+.login-view {
+    vertical-align: center;
+    width: 280;
 }
 
-.rememberForgot {
+.login-component {
+    background-color: white;
+    margin-top: 10;
+}
+
+.remember-forgot-components {
     color: white; 
     font-size: 12;
     font-family: Roboto-Bold;
+    height: 48;
+}
+
+.check-box {
+    width: 28;
+    height: 28;
+    horizontal-align: left;
 }

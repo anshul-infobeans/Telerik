@@ -1,34 +1,34 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded" navigatedTo="navigatedTo" actionBarHidden="true">
     <GridLayout rows="*" tap="tapOnView">
 		<Image src="{{ imageSource }}" stretch="aspectFill" />
-		<StackLayout verticalAlignment="center" >
-            <Image src="~/resources/login/Logo.png" cssClass="app-logo" />
-            <Border borderWidth="1" borderColor="#C0C0C0" width="280" height="50" tap="userFieldPressed">
-            	<DockLayout width="278" backgroundColor="#FFFFFF" >
-                	<TextField dock="left" id="tusername" cssClass="text-input" hint="Email" keyboardType="email" returnKeyType="next" text="{{ username }}" />
-               	    <Image dock="right" src="~/resources/login/Email.png" cssClass="input-image" stretch="aspectFit" tap="userFieldPressed" />
-                </DockLayout>
-     		</Border>
-            <Label visibility="{{ emailErrorVisibility }}" cssClass="error-message" horizontalAlignment="center" text="Invalid Email" style="margin: 0 0 0 190; " width="90" height="18" />
-            <Border borderWidth="1" borderColor="#C0C0C0" width="280" height="50" tap="passwordFieldPressed" style="margin-top: 10">
-            	<DockLayout width="278" backgroundColor="#FFFFFF" >
-                	<TextField dock="left" id="tpassword" cssClass="text-input" hint="Password" secure="true" returnKeyType="go" text="{{ password }}"/>
-               	    <Image dock="right" src="~/resources/login/Password_lock.png" cssClass="input-image" stretch="aspectFit" tap="passwordFieldPressed" />
-                </DockLayout>
-     		</Border>
-            <DockLayout stretchLastChild="true" horizontalAlignment="center" >
-      			<Image dock="left" src="{{ checkBoxImageSource }}" style="margin: 10 0 10 0;" width="28" height="28" tap="rememberMeButtonTap" />
-                <Label id="lrememberMe" dock="left" text="Remember me" width="90" height="28" tap="rememberMeButtonTap" cssClass="rememberForgot" />
-   				<Label id="lforgotPassword" dock="right" text="Forgot Password?" width="120" height="28"  tap="forgotPasswordButtonTap" cssClass="rememberForgot" />
- 			</DockLayout >
-            <Button text="Log In" id="login" cssClass="login-button primaryButtonUnselected" tap="loginButtonTap" />
-            <Label cssClass="error-message" visibility="{{ loginErrorVisibility }}" horizontalAlignment="center" text="The e-mail address or password you entered was incorrect. Please try again" style="margin: 5 0 5 0;" width="280" height="30" textWrap="true" />
-            <ActivityIndicator busy="{{ isLoading }}" cssClass="activity-indicator" style="margin: 10 0 0 0;" />
-    	</StackLayout>
-        <StackLayout orientation="horizontal" cssClass="policyTerms">
-            <Label id="privacyPolicy" text="Privacy Policy" cssClass="policyTermsButton" tap="privacyPolicyButtonPressed" />
-            <Label id="termsOfUser" text="Terms Of Use" cssClass="policyTermsButton" tap="termsOfUseButtonPressed"/>
-        </StackLayout>
+        <StackLayout cssClass="login-view">
+        	<Image src="~/resources/login/Logo.png" cssClass="app-logo" />
+        	<Border cssClass="text-field-border login-component" tap="userFieldPressed">
+        		<DockLayout>
+            		<TextField dock="left" id="tusername" cssClass="text-input" hint="Email" keyboardType="email" returnKeyType="next" text="{{ username }}" />
+           	    	<Image dock="right" src="~/resources/login/Email.png" cssClass="input-image" stretch="aspectFit" tap="userFieldPressed" />
+            	</DockLayout>
+   			</Border>
+        	<Label visibility="{{ emailErrorVisibility }}" cssClass="error-message invalid-email" text="Invalid Email"/>
+        	<Border cssClass="text-field-border login-component" tap="passwordFieldPressed">
+        		<DockLayout>
+            		<TextField dock="left" id="tpassword" cssClass="text-input" hint="Password" secure="true" returnKeyType="go" text="{{ password }}"/>
+           	    	<Image dock="right" src="~/resources/login/Password_lock.png" cssClass="input-image" stretch="aspectFit" tap="passwordFieldPressed" />
+            	</DockLayout>
+   			</Border>
+        	<GridLayout cssClass="remember-forgot-components">
+    			<Image cssClass="check-box" src="{{ checkBoxImageSource }}" tap="rememberMeButtonTap" />
+            	<Label id="lrememberMe" text="Remember me" tap="rememberMeButtonTap" cssClass="rememberForgot" />
+  				<Label id="lforgotPassword" text="Forgot Password?" tap="forgotPasswordButtonTap" cssClass="rememberForgot" />
+			</GridLayout>
+        	<Button text="Log In" id="login" cssClass="login-button primaryButtonUnselected" tap="loginButtonTap" />
+        	<Label cssClass="error-message" visibility="{{ loginErrorVisibility }}" text="The e-mail address or password you entered was incorrect. Please try again" textWrap="true" />
+        	<ActivityIndicator busy="{{ isLoading }}" cssClass="activity-indicator"/>
+  		</StackLayout>
+     	<StackLayout orientation="horizontal" cssClass="policyTerms">
+        	<Label id="privacyPolicy" text="Privacy Policy" cssClass="policyTermsButton" tap="privacyPolicyButtonPressed" />
+        	<Label id="termsOfUser" text="Terms Of Use" cssClass="policyTermsButton" tap="termsOfUseButtonPressed"/>
+     	</StackLayout>
         <Label text="Copyright C 2014, CoAdvantage, Inc. All Rights Reserved." cssClass="copyrightText" />
 	</GridLayout>
 </Page>
