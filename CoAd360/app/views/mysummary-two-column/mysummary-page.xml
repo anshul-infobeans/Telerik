@@ -68,7 +68,7 @@
                 
                 <StackLayout orientation="horizontal" width="{{ widthOfWidget }}" >
                 	<Label textWrap="true" text="123-456-7890" width="{{ infoWidth }}" cssClass="dataLabel" />
-                	<Label textWrap="true" text="Lukehallam@gmail.com" width="{{ infoWidth }}" cssClass="dataLabel" />
+                	<Label textWrap="true" text="fairlylongemailid@coadvantage.com" width="{{ infoWidth }}" cssClass="dataLabel" />
             	</StackLayout>
                 
                 <Label textWrap="true" text="Work Email" width="{{ widthOfWidget }}" cssClass="titleLabel" />
