@@ -17,14 +17,13 @@ function pageLoaded(args) {
     	var heading = viewModule.getViewById(page, "heading");
 		heading.android.setGravity(17);
 	}
+    var listPicker = page.getViewById("listPicker");
+    listPicker.items = ["1/9/2015", "1/8/2015", "1/7/2015"];
+    listPicker.selectedIndex = 0;
     
-    //Set up the date picker
-    var datePicker = viewModule.getViewById(page, "datePicker");
-    datePicker.year = 2015;
- 	datePicker.month = 1;
-	datePicker.day = 5;
-	datePicker.minDate = new Date(2000, 1, 1);
-	datePicker.maxDate = new Date();
+    var dateLabel = viewModule.getViewById(page, "tdatepicker");
+	dateLabel.text = listPicker.items[0];
+    
 };
 exports.pageLoaded = pageLoaded;
 
@@ -43,21 +42,21 @@ function tapOnView(args) {
         searchBar.ios.resignFirstResponder();
     }
     
-    var datePicker = viewModule.getViewById(page, "datePicker");
-    if (datePicker.style.visibility === "visible") {
-        var selectedDateItem = datePicker.day + "/" + datePicker.month + "/" + datePicker.year;
+    var listPicker = viewModule.getViewById(page, "listPicker");
+    if (listPicker.style.visibility === "visible") {
+        var selectedDateItem = listPicker.items[listPicker.selectedIndex];
 		var dateLabel = viewModule.getViewById(page, "tdatepicker");
 		dateLabel.text = selectedDateItem;
         
-        datePicker.style.visibility="collapsed";
+        listPicker.style.visibility="collapsed";
     }
 }
 exports.tapOnView = tapOnView;
 
-function datePickerPressed(args) {
+function listPickerPressed(args) {
     
-    var datePicker = viewModule.getViewById(page, "datePicker");
-    datePicker.style.visibility="visible";
+    var listPicker = viewModule.getViewById(page, "listPicker");
+    listPicker.style.visibility="visible";
     
 }
-exports.datePickerPressed = datePickerPressed;
+exports.listPickerPressed = listPickerPressed;

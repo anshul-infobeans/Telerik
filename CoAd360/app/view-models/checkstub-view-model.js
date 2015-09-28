@@ -19,9 +19,6 @@ var CheckStubViewModel = (function (_super) {
         this.set( "widthOfWidget", widthOfWidget );
         var infoWidth = widthOfWidget/2;
         this.set( "infoWidth", infoWidth );
-        
-        //this.dateItems = ["3/5/2015", "16/7/2015", "1/9/2015"];
-		//this.selectedDateItem = 1;
     }
     
     return CheckStubViewModel;

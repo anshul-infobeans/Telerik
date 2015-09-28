@@ -5,9 +5,9 @@
       			<SearchBar text="{{ search }}" hint="Tap to search" id="searchField" cssClass="searchbar" />
                 <Label cssClass="gap" />
                 <Label textWrap="true" text="Check Stub Date" width="{{ widthOfWidget }}" cssClass="titleLabel" />
-                <Border cssClass="border" width="{{ widthOfWidget }}" tap="datePickerPressed">
+                <Border cssClass="border" width="{{ widthOfWidget }}" tap="listPickerPressed">
             		<DockLayout width="{{ widthOfWidget }}" >
-                		<Label dock="left" width="{{ widthOfWidget-30 }}" id="tdatepicker" cssClass="text-input dateLabel" text="5/1/2015"/>
+                		<Label dock="left" width="{{ widthOfWidget-30 }}" id="tdatepicker" cssClass="text-input dateLabel" text="dd/MM/yyyy"/>
                 	</DockLayout>
      			</Border>
                 
@@ -120,6 +120,6 @@
     	<Label id="heading" text="CHECK STUB" cssClass="pageheading"/>
     	<Image src="~/resources/common/BackButton.png" cssClass="back-button" stretch="aspectFit" tap="backButtonPressed" />
     	<Label id="tapableArea" tap="backButtonPressed" cssClass="back-tapableArea"/>
-        <DatePicker id="datePicker" visibility="collapsed"></DatePicker>
+        <ListPicker id="listPicker" visibility="collapsed"></ListPicker>
 	</GridLayout>
 </Page>
