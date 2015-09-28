@@ -12,11 +12,6 @@ function pageLoaded(args) {
     var heading = viewModule.getViewById(page, "heading");
     heading.text = param1Value;
     
-    var navigationBar = viewModule.getViewById(page, "navigationBar");
-    var tapableArea = viewModule.getViewById(page, "tapableArea");
-    navigationBar.style.height=44;
-    tapableArea.style.height=44;
-    
     if (page.android)
     {
     	var heading = viewModule.getViewById(page, "heading");
