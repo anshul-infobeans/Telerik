@@ -9,6 +9,7 @@ var observable = require("data/observable");
 var appSettingsModule = require("application-settings");
 var frameModule = require("ui/frame");
 var utilityModule = require("../common/utility");
+var serviceModule = require("../common/service");
 var platformModule = require("platform");
 var http = require("http");
 
@@ -132,50 +133,22 @@ var LoginViewModel = (function (_super) {
                 
             	this.beginLoading();
                 
-                frameModule.topmost().navigate({
-					moduleName: "./views/blank/blank",
-					animated: true
-          		});
-                
-                /*
-                var result;
-				http.request({
-    				url: "https://360apiqa.coadvantage.com/Api/ValidateUser",
-    				method: "POST",
-    				headers: { "Content-Type": "application/json" },
-    				content: JSON.stringify({ "Email": this.username, "Password": this.password, "IPAddress": "178.68.54.53" })
-					}).then(function (response) {
-    					result = response.content.toJSON();
-    					alert(result);
-					}, function (e) {
-    				alert("Error occurred " + e);
-				});
-                
-                */
+                serviceModule.service.login(this.username,this.password).then(function (data) {
+                    frameModule.topmost().navigate({
+						moduleName: "./views/blank/blank",
+						animated: true
+          				});
+                		_this.endLoading();
+                }, function (error) {
+                    _this.clearPassword();
+                	_this.endLoading();
+                })
             }
             else
             {
                 //show error message for email
                 this.set( "emailErrorVisibility", "visible" );
             }    
-            
-            
-            
-            
-            
-            
-            /*serviceModule.service.login(this.username, this.password).then(function (data) {
-                	frameModule.topmost().navigate({
-					moduleName: "./views/login/login-page",
-					animated: true
-					});
-                _this.endLoading();
-            }, function (error) {
-                _this.clearPassword();
-                _this.endLoading();
-            });*/
-            
-            
         }
         else {
             this.clearPassword();
