@@ -1,0 +1,81 @@
+@const margin-widgets: 15;
+
+body {
+}
+
+.mainview {
+    vertical-align: top;
+    margin-top: 44;
+    background-color: white;
+}
+
+#user-profile-image {
+    margin-top: 25;
+    horizontal-align: left;
+    width: 47;
+    height: 47;
+    margin-bottom: 12;
+}
+
+#user-full-name {
+    vertical-align: top;
+    horizontal-align: left;
+    margin-top: 25;
+    margin-left: 67;
+    font-size: 20;
+    text-align: left;
+    color: #76BD23; 
+    font-family: Roboto-Bold;
+}
+
+#user-designation {
+    margin-left: 67;
+    margin-top: 50;
+    horizontal-align: left;
+    font-size: 12; 
+    text-align: left; 
+    color: #7A7B7E; 
+    font-family: Roboto-Regular;
+    margin-bottom: 10;
+}
+
+.separator {
+    margin-top: 15;
+    margin-bottom: 15;
+    background-color: #DEDEDE;
+    height: 1;
+}
+
+.titleLabel {
+    font-size: 14; 
+    text-align: left; 
+    color: #404040; 
+    font-family: Roboto-Light;  
+    margin-top: 15;
+}
+
+.dataLabel {
+    font-size: 14; 
+    text-align: left; 
+    color: #404040; 
+    font-family: Roboto-Regular;
+}
+
+.border {
+    border-width: 1;
+    border-color: #C0C0C0;
+}
+
+.sectionheading {
+    font-size: 14; 
+    text-align: left; 
+    color: #8666BC; 
+    font-family: Roboto-Medium;
+    margin-left: 15;
+    text-transform: uppercase;
+}
+
+.text-input {
+    margin-top:5;
+    margin-bottom:5;
+}
