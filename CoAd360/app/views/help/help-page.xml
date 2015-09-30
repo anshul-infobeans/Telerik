@@ -5,6 +5,21 @@
       			<SearchBar text="{{ search }}" hint="Tap to search" id="searchField" cssClass="searchbar" />
                 
                 <Label text="HELP & SUPPORT FORM" cssClass="sectionheading"/>
+                <Label textWrap="true" text="Have questions? Want to report a bug? Submit the form below to let us know how we can help!" cssClass="dataLabel" />
+                
+                <Label textWrap="true" text="Title" width="{{ widthOfWidget }}" cssClass="titleLabel" />
+                <Border cssClass="border" width="{{ widthOfWidget }}">
+            		<DockLayout width="{{ widthOfWidget }}" >
+                		<TextField dock="left" width="{{ widthOfWidget-30 }}" id="title" cssClass="text-input dataLabel" hint="Enter case title" returnKeyType="next"/>
+                	</DockLayout>
+     			</Border>
+                
+                <Label textWrap="true" text="Category" width="{{ widthOfWidget }}" cssClass="titleLabel" />
+                <Border cssClass="border" width="{{ widthOfWidget }}">
+            		<DockLayout width="{{ widthOfWidget }}" >
+                		<TextField dock="left" width="{{ widthOfWidget-30 }}" id="category" cssClass="text-input dataLabel" hint="Select category" returnKeyType="next"/>
+                	</DockLayout>
+     			</Border>
           		
                 <GridLayout width="{{ widthOfWidget}}">
                 	<Image id="user-profile-image" src="~/resources/dashboard/default_user_image.png" stretch="aspectFit" tap="backButtonPressed" />
@@ -14,138 +29,99 @@
                 
                 <Label width="{{ widthOfWidget}}" cssClass="separator" />
                 
-               	<Label text="CONTACT INFORMATION" cssClass="sectionheading"/>
+               	<Label text="OPEN CASES" cssClass="sectionheading"/>
                 
             	<StackLayout orientation="horizontal" width="{{ widthOfWidget }}" >
-                	<Label textWrap="true" text="First Name" width="{{ infoWidth }}" cssClass="titleLabel" />
-                	<Label textWrap="true" text="Last Name" width="{{ infoWidth }}" cssClass="titleLabel" />
+                	<Label textWrap="true" text="Case Title" width="{{ infoWidth }}" cssClass="titleLabel" />
+                	<Label textWrap="true" text="Category" width="{{ infoWidth }}" cssClass="titleLabel" />
             	</StackLayout>
                 
                 <StackLayout orientation="horizontal" width="{{ widthOfWidget }}" >
-                	<Label textWrap="true" text="Luke" width="{{ infoWidth }}" cssClass="dataLabel" />
-                	<Label textWrap="true" text="Hallam" width="{{ infoWidth }}" cssClass="dataLabel" />
+                	<Label textWrap="true" text="Can't find HR documents" width="{{ infoWidth }}" cssClass="dataLabel" />
+                	<Label textWrap="true" text="HR" width="{{ infoWidth }}" cssClass="dataLabel" />
             	</StackLayout>
                 
-                <Label textWrap="true" text="Middle Name" width="{{ widthOfWidget }}" cssClass="titleLabel" />
-                <Label textWrap="true" text="Michael" width="{{ widthOfWidget }}" cssClass="dataLabel" />
-                
-                <Label textWrap="true" text="Address Line 1" width="{{ widthOfWidget }}" cssClass="titleLabel" />
-                <Border cssClass="border" width="{{ widthOfWidget }}">
-            		<DockLayout width="{{ widthOfWidget }}" >
-                		<Label dock="left" width="{{ widthOfWidget-30 }}" id="tusername" cssClass="text-input dataLabel" text="123 Mulberry Street"/>
-                	</DockLayout>
-     			</Border>
-                
-                <Label textWrap="true" text="Address Line 2" width="{{ widthOfWidget }}" cssClass="titleLabel" />
-                <Border cssClass="border" width="{{ widthOfWidget }}">
-            		<DockLayout width="{{ widthOfWidget }}" >
-                		<Label dock="left" width="{{ widthOfWidget-30 }}" id="tusername" cssClass="text-input dataLabel" text="Apt. 123"/>
-                	</DockLayout>
-     			</Border>
+                <Label textWrap="true" text="Comments" width="{{ widthOfWidget }}" cssClass="titleLabel" />
+                <Label textWrap="true" text="I can't find my HR documents" width="{{ widthOfWidget }}" cssClass="dataLabel" />
                 
                 <StackLayout orientation="horizontal" width="{{ widthOfWidget }}" >
-                	<Label textWrap="true" text="City" width="{{ infoWidth }}" cssClass="titleLabel" />
-                	<Label textWrap="true" text="State" width="{{ infoWidth }}" cssClass="titleLabel" />
+                	<Label textWrap="true" text="Date Submitted" width="{{ infoWidth }}" cssClass="titleLabel" />
+                	<Label textWrap="true" text="Status" width="{{ infoWidth }}" cssClass="titleLabel" />
             	</StackLayout>
                 
                 <StackLayout orientation="horizontal" width="{{ widthOfWidget }}" >
-                	<Label textWrap="true" text="New York" width="{{ infoWidth }}" cssClass="dataLabel" />
-                	<Label textWrap="true" text="NY" width="{{ infoWidth }}" cssClass="dataLabel" />
+                	<Label textWrap="true" text="07/24/2015" width="{{ infoWidth }}" cssClass="dataLabel" />
+                	<Label textWrap="true" text="Pending" width="{{ infoWidth }}" cssClass="dataLabel" />
             	</StackLayout>
                 
                 <StackLayout orientation="horizontal" width="{{ widthOfWidget }}" >
-                	<Label textWrap="true" text="Zip" width="{{ infoWidth }}" cssClass="titleLabel" />
-                	<Label textWrap="true" text="Home Phone" width="{{ infoWidth }}" cssClass="titleLabel" />
+                	<Label textWrap="true" text="Case Title" width="{{ infoWidth }}" cssClass="titleLabel" />
+                	<Label textWrap="true" text="Category" width="{{ infoWidth }}" cssClass="titleLabel" />
             	</StackLayout>
                 
                 <StackLayout orientation="horizontal" width="{{ widthOfWidget }}" >
-                	<Label textWrap="true" text="12345" width="{{ infoWidth }}" cssClass="dataLabel" />
-                	<Label textWrap="true" text="123-456-7890" width="{{ infoWidth }}" cssClass="dataLabel" />
+                	<Label textWrap="true" text="Can't find HR documents" width="{{ infoWidth }}" cssClass="dataLabel" />
+                	<Label textWrap="true" text="HR" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</StackLayout>
+                
+                <Label textWrap="true" text="Comments" width="{{ widthOfWidget }}" cssClass="titleLabel" />
+                <Label textWrap="true" text="I can't find my HR documents" width="{{ widthOfWidget }}" cssClass="dataLabel" />
+                
+                <StackLayout orientation="horizontal" width="{{ widthOfWidget }}" >
+                	<Label textWrap="true" text="Date Submitted" width="{{ infoWidth }}" cssClass="titleLabel" />
+                	<Label textWrap="true" text="Status" width="{{ infoWidth }}" cssClass="titleLabel" />
             	</StackLayout>
                 
                 <StackLayout orientation="horizontal" width="{{ widthOfWidget }}" >
-                	<Label textWrap="true" text="Mobile Phone" width="{{ infoWidth }}" cssClass="titleLabel" />
-                	<Label textWrap="true" text="Personal Email" width="{{ infoWidth }}" cssClass="titleLabel" />
+                	<Label textWrap="true" text="07/24/2015" width="{{ infoWidth }}" cssClass="dataLabel" />
+                	<Label textWrap="true" text="Pending" width="{{ infoWidth }}" cssClass="dataLabel" />
             	</StackLayout>
                 
                 <StackLayout orientation="horizontal" width="{{ widthOfWidget }}" >
-                	<Label textWrap="true" text="123-456-7890" width="{{ infoWidth }}" cssClass="dataLabel" />
-                	<Label textWrap="true" text="fairlylongemailid@coadvantage.com" width="{{ infoWidth }}" cssClass="dataLabel" />
-            	</StackLayout>
-                
-                <Label textWrap="true" text="Work Email" width="{{ widthOfWidget }}" cssClass="titleLabel" />
-                <Label textWrap="true" text="Lukehallam@gmail.com" width="{{ widthOfWidget }}" cssClass="dataLabel" />
-                
-                <Label width="{{ widthOfWidget}}" cssClass="separator" />
-                
-               	<Label text="PERSONAL DETAILS" cssClass="sectionheading"/>
-                
-            	<StackLayout orientation="horizontal" width="{{ widthOfWidget }}" >
-                	<Label textWrap="true" text="Social Security Number" width="{{ infoWidth }}" cssClass="titleLabel" />
-                	<Label textWrap="true" text="Birthdate" width="{{ infoWidth }}" cssClass="titleLabel" />
+                	<Label textWrap="true" text="Case Title" width="{{ infoWidth }}" cssClass="titleLabel" />
+                	<Label textWrap="true" text="Category" width="{{ infoWidth }}" cssClass="titleLabel" />
             	</StackLayout>
                 
                 <StackLayout orientation="horizontal" width="{{ widthOfWidget }}" >
-                	<Label textWrap="true" text="123-45-6789" width="{{ infoWidth }}" cssClass="dataLabel" />
-                	<Label textWrap="true" text="10/20/1980" width="{{ infoWidth }}" cssClass="dataLabel" />
+                	<Label textWrap="true" text="Benefits report" width="{{ infoWidth }}" cssClass="dataLabel" />
+                	<Label textWrap="true" text="Benefits" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</StackLayout>
+                
+                <Label textWrap="true" text="Comments" width="{{ widthOfWidget }}" cssClass="titleLabel" />
+                <Label textWrap="true" text="Not displaying correctly" width="{{ widthOfWidget }}" cssClass="dataLabel" />
+                
+                <StackLayout orientation="horizontal" width="{{ widthOfWidget }}" >
+                	<Label textWrap="true" text="Date Submitted" width="{{ infoWidth }}" cssClass="titleLabel" />
+                	<Label textWrap="true" text="Status" width="{{ infoWidth }}" cssClass="titleLabel" />
             	</StackLayout>
                 
                 <StackLayout orientation="horizontal" width="{{ widthOfWidget }}" >
-                	<Label textWrap="true" text="Age" width="{{ infoWidth }}" cssClass="titleLabel" />
-                	<Label textWrap="true" text="Gender" width="{{ infoWidth }}" cssClass="titleLabel" />
+                	<Label textWrap="true" text="07/21/2015" width="{{ infoWidth }}" cssClass="dataLabel" />
+                	<Label textWrap="true" text="In progress" width="{{ infoWidth }}" cssClass="dataLabel" />
             	</StackLayout>
                 
                 <StackLayout orientation="horizontal" width="{{ widthOfWidget }}" >
-                	<Label textWrap="true" text="35" width="{{ infoWidth }}" cssClass="dataLabel" />
-                	<Label textWrap="true" text="Male" width="{{ infoWidth }}" cssClass="dataLabel" />
-            	</StackLayout>
-                
-                <Label textWrap="true" text="Ethnicity" width="{{ widthOfWidget }}" cssClass="titleLabel" />
-                <Label textWrap="true" text="Caucasian" width="{{ widthOfWidget }}" cssClass="dataLabel" />
-                
-                <Label width="{{ widthOfWidget}}" cssClass="separator" />
-                
-                <Label text="VETERAN STATUS" cssClass="sectionheading"/>
-                
-            	<StackLayout orientation="horizontal" width="{{ widthOfWidget }}" >
-                	<Label textWrap="true" text="Veteran Status" width="{{ infoWidth }}" cssClass="titleLabel" />
-                	<Label textWrap="true" text="Other Status" width="{{ infoWidth }}" cssClass="titleLabel" />
+                	<Label textWrap="true" text="Case Title" width="{{ infoWidth }}" cssClass="titleLabel" />
+                	<Label textWrap="true" text="Category" width="{{ infoWidth }}" cssClass="titleLabel" />
             	</StackLayout>
                 
                 <StackLayout orientation="horizontal" width="{{ widthOfWidget }}" >
-                	<Label textWrap="true" text="Veteran" width="{{ infoWidth }}" cssClass="dataLabel" />
-                	<Label textWrap="true" text="Smoker, Blind" width="{{ infoWidth }}" cssClass="dataLabel" />
+                	<Label textWrap="true" text="Time breakdown chart" width="{{ infoWidth }}" cssClass="dataLabel" />
+                	<Label textWrap="true" text="Time & labor" width="{{ infoWidth }}" cssClass="dataLabel" />
+            	</StackLayout>
+                
+                <Label textWrap="true" text="Comments" width="{{ widthOfWidget }}" cssClass="titleLabel" />
+                <Label textWrap="true" text="labor allocation isn't functioning correctly" width="{{ widthOfWidget }}" cssClass="dataLabel" />
+                
+                <StackLayout orientation="horizontal" width="{{ widthOfWidget }}" >
+                	<Label textWrap="true" text="Date Submitted" width="{{ infoWidth }}" cssClass="titleLabel" />
+                	<Label textWrap="true" text="Status" width="{{ infoWidth }}" cssClass="titleLabel" />
             	</StackLayout>
                 
                 <StackLayout orientation="horizontal" width="{{ widthOfWidget }}" >
-                	<Label textWrap="true" text="Nick Name" width="{{ infoWidth }}" cssClass="titleLabel" />
-                	<Label textWrap="true" text="Citizenship" width="{{ infoWidth }}" cssClass="titleLabel" />
+                	<Label textWrap="true" text="07/20/2015" width="{{ infoWidth }}" cssClass="dataLabel" />
+                	<Label textWrap="true" text="In progress" width="{{ infoWidth }}" cssClass="dataLabel" />
             	</StackLayout>
-                
-                <StackLayout orientation="horizontal" width="{{ widthOfWidget }}" >
-                	<Label textWrap="true" text="N/A" width="{{ infoWidth }}" cssClass="dataLabel" />
-                	<Label textWrap="true" text="United States" width="{{ infoWidth }}" cssClass="dataLabel" />
-            	</StackLayout>
-                
-                <Label textWrap="true" text="School District Number" width="{{ widthOfWidget }}" cssClass="titleLabel" />
-                <Label textWrap="true" text="N/A" width="{{ widthOfWidget }}" cssClass="dataLabel" />
-                
-                <Label width="{{ widthOfWidget}}" cssClass="separator" />
-                
-                <Label text="EMERGENCY CONTACT INFO" cssClass="sectionheading"/>
-                
-            	<StackLayout orientation="horizontal" width="{{ widthOfWidget }}" >
-                	<Label textWrap="true" text="Contact Name" width="{{ infoWidth }}" cssClass="titleLabel" />
-                	<Label textWrap="true" text="Contact Relation" width="{{ infoWidth }}" cssClass="titleLabel" />
-            	</StackLayout>
-                
-                <StackLayout orientation="horizontal" width="{{ widthOfWidget }}" >
-                	<Label textWrap="true" text="Mary Hallan" width="{{ infoWidth }}" cssClass="dataLabel" />
-                	<Label textWrap="true" text="Wife" width="{{ infoWidth }}" cssClass="dataLabel" />
-            	</StackLayout>
-                
-                <Label textWrap="true" text="Contact Phone" width="{{ widthOfWidget }}" cssClass="titleLabel" />
-                <Label textWrap="true" text="123-456-7890" width="{{ widthOfWidget }}" cssClass="dataLabel" />
                 
                 <Label cssClass="gap" />
                 
