@@ -22,13 +22,24 @@ function pageLoaded(args) {
     {
     	var heading = viewModule.getViewById(page, "heading");
 		heading.android.setGravity(17);
+        
+        var tsearch = viewModule.getViewById(page, "tsearch");
+		tsearch.android.setGravity(17);
+        
+        var mysummary1 = viewModule.getViewById(page, "mysummary");
+		mysummary1.android.setGravity(17);
+        var mysummaryV2 = viewModule.getViewById(page, "mysummaryV2");
+		mysummaryV2.android.setGravity(17);
+        var mysummaryV3 = viewModule.getViewById(page, "mysummaryV3");
+		mysummaryV3.android.setGravity(17);
+        var checkstub = viewModule.getViewById(page, "checkstub");
+		checkstub.android.setGravity(17);
+        var mysummarytwocolumn = viewModule.getViewById(page, "mysummarytwocolumn");
+		mysummarytwocolumn.android.setGravity(17);
+        
+        var help = viewModule.getViewById(page, "help");
+		help.android.setGravity(17);
 	}
-    
-    /*
-    var loginButton = viewModule.getViewById(page, "login");
-    loginButton.style.opacity="0.5";
-    loginButton.isEnabled=false;
-    */
 };
 exports.pageLoaded = pageLoaded;
 
@@ -90,4 +101,10 @@ function mySummayPageTwoColumn(args) {
 }
 exports.mySummayPageTwoColumn = mySummayPageTwoColumn;
 
-
+function helpPage(args) {
+    frameModule.topmost().navigate({
+			moduleName: "./views/help/help-page",
+			animated: true
+		});
+}
+exports.helpPage = helpPage;

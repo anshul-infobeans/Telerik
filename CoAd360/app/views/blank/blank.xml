@@ -7,23 +7,14 @@
             	<Image marginLeft="10" dock="left" src="~/resources/dashboard/Search.png" cssClass="input-image" stretch="aspectFit" tap="passwordFieldPressed" height="17" width="17"/>
             	<TextField marginLeft="10" dock="right" id="tsearch" cssClass="text-input" hint="Tap to search" returnKeyType="go" text="{{ search }}"/>
         	</DockLayout>
-            <GridLayout width="{{ widthOfWidget}}" cssClass="widget" tap="mySummayPage">
-        		<Label text="My Summary" cssClass="widget-label"/>
-       		</GridLayout>
         	<GridLayout width="{{ widthOfWidget}}" cssClass="widget" tap="checkStubPage">
-        		<Label text="Check Stub" cssClass="widget-label"/>
+        		<Label id="checkstub" text="Check Stub" cssClass="widget-label"/>
         	</GridLayout>
         	<GridLayout width="{{ widthOfWidget}}" cssClass="widget" tap="mySummayPageTwoColumn">
-        		<Label text="My Summary Two Column" cssClass="widget-label"/>
-        	</GridLayout>
-        	<GridLayout width="{{ widthOfWidget}}" cssClass="widget" tap="mySummayPage2">
-        		<Label text="My Summary V2" cssClass="widget-label"/>
+        		<Label id="mysummarytwocolumn" text="My Summary Two Column" cssClass="widget-label"/>
         	</GridLayout>
             <GridLayout width="{{ widthOfWidget}}" cssClass="widget" tap="mySummayPage3">
-        		<Label text="My Summary V3" cssClass="widget-label"/>
-        	</GridLayout>
-            <GridLayout width="{{ widthOfWidget}}" cssClass="widget" tap="helpPage">
-        		<Label text="Help" cssClass="widget-label"/>
+        		<Label id="mysummaryV3" text="My Summary V3" cssClass="widget-label"/>
         	</GridLayout>
             <Label cssClass="gap" />
         </StackLayout>
