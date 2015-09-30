@@ -30,14 +30,14 @@
                 <Label textWrap="true" text="Address Line 1" width="{{ widthOfWidget }}" cssClass="titleLabel" />
                 <Border cssClass="border" width="{{ widthOfWidget }}">
             		<DockLayout width="{{ widthOfWidget }}" >
-                		<Label dock="left" width="{{ widthOfWidget-30 }}" id="tusername" cssClass="text-input dataLabel" text="123 Mulberry Street"/>
+                		<Label dock="left" width="{{ (widthOfWidget-10) }}" id="tusername" cssClass="text-input dataLabel" text="123 Mulberry Street"/>
                 	</DockLayout>
      			</Border>
                 
                 <Label textWrap="true" text="Address Line 2" width="{{ widthOfWidget }}" cssClass="titleLabel" />
                 <Border cssClass="border" width="{{ widthOfWidget }}">
             		<DockLayout width="{{ widthOfWidget }}" >
-                		<Label dock="left" width="{{ widthOfWidget-30 }}" id="tusername" cssClass="text-input dataLabel" text="Apt. 123"/>
+                		<Label dock="left" width="{{ (widthOfWidget-10) }}" id="tusername" cssClass="text-input dataLabel" text="Apt. 123"/>
                 	</DockLayout>
      			</Border>
                 
@@ -148,12 +148,13 @@
                 <Label cssClass="gap" />
                 
                 <GridLayout cssClass="tool-bar-button" >
-                    <Button text="Terms Of Use" cssClass="linkbutton terms-of-use" />
+                    <Label id="termsofuse" text="Terms Of Use" cssClass="linkbutton terms-of-use" />
                     <Label cssClass="link-separator link-separator-left"/>
-                	<Button text="Privacy Policy" cssClass="linkbutton privacy-policy" />
+                	<Label id="privacypolicy" text="Privacy Policy" cssClass="linkbutton privacy-policy" />
                     <Label cssClass="link-separator link-separator-right"/>
-                    <Button text="Contact Us" cssClass="linkbutton contact-us" />
+                    <Label id="contactus" text="Contact Us" cssClass="linkbutton contact-us" />
             	</GridLayout>
+                <Label id="android-gap" cssClass="gap"/>
      		</StackLayout>
         </ScrollView>
 	<Label id="navigationBar" cssClass="navigationbar" />

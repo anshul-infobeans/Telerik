@@ -6,9 +6,7 @@ var Service = (function () {
     }
     Service.prototype.login = function (username, password) {
         var _this = this;
-        
         return new Promise(function (resolve, reject) {
-            
             _this.getIPAddress().then(function (data) {
                 var ipAddress = data;
 				httpModule.request({
@@ -16,8 +14,8 @@ var Service = (function () {
     				method: "POST",
     				headers: { "Content-Type": "application/json" }
 					}).then(function (response) {
-    					var result = response.content.toJSON();
-    					resolve(result);
+    					//var result = response.content.toJSON();
+    					resolve("success");
 					}, function (e) {
                 		reject(e);
 				});
@@ -35,7 +33,8 @@ var Service = (function () {
     				method: "GET",
     				headers: { "Content-Type": "application/json" }
 					}).then(function (response) {
-               			var ipAddress=response.content.toJSON().ip;
+               			//var ipAddress=response.content.toJSON().ip;
+                		var ipAddress="10.10.1.27";
     					resolve(ipAddress);
 					}, function (e) {
     					reject(e);

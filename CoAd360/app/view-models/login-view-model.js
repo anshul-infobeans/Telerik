@@ -140,8 +140,10 @@ var LoginViewModel = (function (_super) {
           				});
                 		_this.endLoading();
                 }, function (error) {
-                    _this.clearPassword();
+                    alert("ERROR");
+                    /*_this.clearPassword();
                 	_this.endLoading();
+                    this.set( "emailErrorVisibility", "visible" );*/
                 })
             }
             else

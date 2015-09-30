@@ -28,6 +28,16 @@ function pageLoaded(args) {
 		var termsOfUser = viewModule.getViewById(page, "termsOfUser");
 		termsOfUser.android.setGravity(17);
 	}
+    
+    /*
+    var usernameField = viewModule.getViewById(page, "tusername");
+    usernameField._onTextPropertyChanged(function(){
+        alert("Change");
+    });*/
+    /*
+    testButton.on(buttonModule.Button.tapEvent, function () {
+  source.set("testProperty", "change" + counter);
+  });*/
 };
 exports.pageLoaded = pageLoaded;
 

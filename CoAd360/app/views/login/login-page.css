@@ -1,11 +1,10 @@
 body {
+
 }
-@login-field-width: 280;
 
 /* app logo */
 .app-logo
 {
-    margin-bottom: 30;
     width: 260;
     vertical-align:center;
 }

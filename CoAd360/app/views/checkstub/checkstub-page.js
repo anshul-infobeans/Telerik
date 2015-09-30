@@ -24,6 +24,7 @@ function pageLoaded(args) {
     var dateLabel = viewModule.getViewById(page, "tdatepicker");
 	dateLabel.text = listPicker.items[0];
     
+    hideSearchKeyboard();
 };
 exports.pageLoaded = pageLoaded;
 
@@ -34,13 +35,7 @@ exports.backButtonPressed = backButtonPressed;
 
 function tapOnView(args) {
     
-    var searchBar = viewModule.getViewById(page, "searchField");
-    if (searchBar.android) {
-        searchBar.android.clearFocus();
-    }
-    if (searchBar.ios) {
-        searchBar.ios.resignFirstResponder();
-    }
+    hideSearchKeyboard();
     
     var listPicker = viewModule.getViewById(page, "listPicker");
     if (listPicker.style.visibility === "visible") {
@@ -52,6 +47,16 @@ function tapOnView(args) {
     }
 }
 exports.tapOnView = tapOnView;
+
+function hideSearchKeyboard() {
+    var searchBar = viewModule.getViewById(page, "searchField");
+    if (searchBar.android) {
+        searchBar.android.clearFocus();
+    }
+    else if (searchBar.ios) {
+        searchBar.ios.resignFirstResponder();
+    }
+}
 
 function listPickerPressed(args) {
     

@@ -4,8 +4,9 @@
       		<StackLayout cssClass="mainview" >
       			<SearchBar text="{{ search }}" hint="Tap to search" id="searchField" cssClass="searchbar" />
                 
+                <Label cssClass="gap" />
                 <Label text="HELP & SUPPORT FORM" cssClass="sectionheading"/>
-                <Label textWrap="true" text="Have questions? Want to report a bug? Submit the form below to let us know how we can help!" cssClass="dataLabel" />
+                <Label width="{{ widthOfWidget }}" textWrap="true" text="Have questions? Want to report a bug? Submit the form below to let us know how we can help!" cssClass="dataLabel" />
                 
                 <Label textWrap="true" text="Title" width="{{ widthOfWidget }}" cssClass="titleLabel" />
                 <Border cssClass="border" width="{{ widthOfWidget }}">
@@ -22,9 +23,8 @@
      			</Border>
           		
                 <GridLayout width="{{ widthOfWidget}}">
-                	<Image id="user-profile-image" src="~/resources/dashboard/default_user_image.png" stretch="aspectFit" tap="backButtonPressed" />
-                    <Label id="user-full-name" text="LUKE HALLAM" />
-                    <Label id="user-designation" text="Senior UI Designer" />
+                	<Button text="CALL" id="login" cssClass="login-button primaryButtonUnselected" tap="loginButtonTap" />
+                    <Button text="SUBMIT TICKET" id="login" cssClass="login-button primaryButtonSelected" tap="loginButtonTap" />
                 </GridLayout>
                 
                 <Label width="{{ widthOfWidget}}" cssClass="separator" />
@@ -135,7 +135,7 @@
      		</StackLayout>
         </ScrollView>
 	<Label id="navigationBar" cssClass="navigationbar" />
-    <Label id="heading" text="PERSONAL INFO" cssClass="pageheading"/>
+    <Label id="heading" text="HELP" cssClass="pageheading"/>
     <Image src="~/resources/common/BackButton.png" cssClass="back-button" stretch="aspectFit" tap="backButtonPressed" />
     <Label id="tapableArea" tap="backButtonPressed" cssClass="back-tapableArea" />
 	</GridLayout>

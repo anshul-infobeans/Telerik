@@ -1,3 +1,5 @@
+@const margin-widgets: 15;
+
 body {
 }
 
@@ -22,7 +24,7 @@ body {
     margin-left: 67;
     font-size: 20;
     text-align: left;
-    color: #76BD23; 
+    color: #4384BF; 
     font-family: Roboto-Bold;
 }
 
@@ -45,7 +47,7 @@ body {
 }
 
 .titleLabel {
-    font-size: 14; 
+    font-size: 13; 
     text-align: left; 
     color: #404040; 
     font-family: Roboto-Light;  
@@ -53,7 +55,7 @@ body {
 }
 
 .dataLabel {
-    font-size: 14; 
+    font-size: 13; 
     text-align: left; 
     color: #404040; 
     font-family: Roboto-Regular;
@@ -65,11 +67,12 @@ body {
 }
 
 .sectionheading {
-    font-size: 14; 
+    font-size: 13; 
     text-align: left; 
     color: #8666BC; 
     font-family: Roboto-Medium;
     margin-left: 20;
+    text-transform: uppercase;
 }
 
 .text-input {
