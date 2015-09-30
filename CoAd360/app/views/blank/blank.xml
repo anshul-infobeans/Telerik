@@ -1,6 +1,7 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded" xmlns:tsb="common/TelerikUI/sidedrawer" actionBarHidden="true">
     <GridLayout rows="*">
-        <Button id="changePasswordButton" text="Change Password" cssClass="change-password-button" tap="changePasswordButtonTap" />
+        <ScrollView>
+            <Button id="changePasswordButton" text="Change Password" cssClass="change-password-button" tap="changePasswordButtonTap" />
         <StackLayout cssClass="main-view">
         	<DockLayout verticalAlignment="top" marginTop="44" backgroundColor="#7157A0" height="34">
             	<Image marginLeft="10" dock="left" src="~/resources/dashboard/Search.png" cssClass="input-image" stretch="aspectFit" tap="passwordFieldPressed" height="17" width="17"/>
@@ -21,7 +22,13 @@
             <GridLayout width="{{ widthOfWidget}}" cssClass="widget" tap="mySummayPage3">
         		<Label text="My Summary V3" cssClass="widget-label"/>
         	</GridLayout>
+            <GridLayout width="{{ widthOfWidget}}" cssClass="widget" tap="helpPage">
+        		<Label text="Help" cssClass="widget-label"/>
+        	</GridLayout>
+            <Label cssClass="gap" />
         </StackLayout>
+        </ScrollView>
+        
         <Label id="navigationBar" cssClass="navigationbar" />
     	<Label id="heading" text="DASHBOARD" cssClass="pageheading"/>
     	<Image src="~/resources/common/Menu.png" cssClass="back-button" stretch="aspectFit" tap="backButtonPressed" />
